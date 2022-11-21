@@ -1,0 +1,56 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.logo {
+		width: 130px;
+		height: 22px;
+		display: block;
+	}
+
+	.links {
+		display: flex;
+		gap: 40px;
+		user-select: none;
+
+		.link {
+			@include navlink;
+			color: $gray800
+		}
+
+		.activeLink {
+			@include navlink;
+			color: $primary
+		}
+	}
+
+	.info {
+		display: flex;
+		gap: 36px;
+
+		.buttonWrapper {
+			width: 206px;
+		}
+
+		.login {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			.person {
+				width: 20px;
+				height: 20px;
+				display: block;
+			}
+
+			.text {
+				@include navlink
+			}
+		}
+	}
+}

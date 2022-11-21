@@ -1,0 +1,20 @@
+@import 'variables';
+
+@mixin button {
+	width: 100%;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
+@mixin basic-button {
+	@include button;
+	background: $btn-gradient;
+	color: $white;
+}
+
+@mixin outline-button {
+	@include button;
+	background: transparent;
+	color: $primary;
+	border: 1px solid $primary;
+}

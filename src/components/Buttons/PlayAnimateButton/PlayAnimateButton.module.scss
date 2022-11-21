@@ -1,0 +1,66 @@
+@import 'scss';
+
+.container {
+	display: flex;
+	align-items: center;
+	user-select: none;
+
+	.button {
+		position: relative;
+		width: 84px;
+		height: 84px;
+
+		.animate {
+			background-color: $primary;
+			opacity: 0.12;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation: animate 1s infinite linear;
+		}
+
+		.btn {
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			position: absolute;
+			cursor: pointer;
+			background-color: $primary;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+		}
+
+		.icon {
+			cursor: pointer;
+			display: block;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-45%, -50%)
+		}
+	}
+
+	.text {
+		color: $gray900;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 150%;
+	}
+}
+
+@keyframes animate {
+	from {
+		width: 62px;
+		height: 62px;
+	}
+
+	to {
+		width: 84px;
+		height: 84px;
+	}
+}

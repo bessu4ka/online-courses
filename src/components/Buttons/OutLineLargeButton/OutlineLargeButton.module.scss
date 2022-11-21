@@ -1,0 +1,7 @@
+@import 'scss';
+
+.container {
+	@include outline-button;
+	height: 52px;
+	font-size: 16px;
+}

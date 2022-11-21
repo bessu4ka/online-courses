@@ -1,0 +1,37 @@
+@import 'scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.headWrapper {
+		display: flex;
+		gap: 180px;
+		align-items: center;
+
+		.mainTitle {
+			font-size: 64px;
+			font-weight: 900;
+			line-height: 130%;
+			max-width: 496px;
+			height: 249px;
+			color: $gray900;
+			overflow: hidden;
+			margin: 24px 0 60px 0;
+		}
+
+		.buttons {
+			display: flex;
+			gap: 24px;
+
+			.transparentBtnWrapper {
+				width: 148px;
+			}
+
+			.BtnWrapper {
+				width: 200px;
+			}
+		}
+	}
+}
