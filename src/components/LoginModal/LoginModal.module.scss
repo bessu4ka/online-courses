@@ -1,0 +1,57 @@
+@import 'scss';
+
+.container {
+
+
+
+	.content {
+		width: 486px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+		background-color: $white;
+
+		.signWithIn {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+
+			>p {
+				font-size: 14px;
+				line-height: 150%;
+				color: $gray700;
+			}
+
+			.iconsWrapper {
+				display: flex;
+				gap: 12px;
+
+				.icon {
+					fill: $gray700;
+					width: 20px;
+					height: 20px;
+					display: block;
+					cursor: pointer;
+
+					&:hover {
+						fill: $primary;
+					}
+				}
+			}
+		}
+
+	}
+
+	.substrate {
+		width: 100vw;
+		height: 100vh;
+		opacity: 0.75;
+		background-color: $gray900;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}

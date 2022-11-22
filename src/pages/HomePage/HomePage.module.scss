@@ -4,33 +4,65 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	color: $gray900;
 
-	.headWrapper {
-		display: flex;
-		gap: 180px;
-		align-items: center;
+	.mainInfo {
+		margin-top: 200px;
 
-		.mainTitle {
-			font-size: 64px;
-			font-weight: 900;
-			line-height: 130%;
-			max-width: 496px;
-			height: 249px;
-			color: $gray900;
-			overflow: hidden;
-			margin: 24px 0 60px 0;
-		}
-
-		.buttons {
+		.headWrapper {
 			display: flex;
-			gap: 24px;
+			gap: 180px;
+			align-items: center;
 
-			.transparentBtnWrapper {
-				width: 148px;
+			.mainTitle {
+				font-size: 64px;
+				font-weight: 900;
+				line-height: 130%;
+				max-width: 496px;
+				height: 249px;
+				overflow: hidden;
+				margin: 24px 0 60px 0;
 			}
 
-			.BtnWrapper {
-				width: 200px;
+			.buttons {
+				display: flex;
+				gap: 24px;
+
+				.transparentBtnWrapper {
+					width: 148px;
+				}
+
+				.BtnWrapper {
+					width: 200px;
+				}
+			}
+		}
+
+		.achievements {
+			display: flex;
+			align-items: center;
+			gap: 66px;
+			margin-top: 189px;
+
+			>article {
+				display: flex;
+				gap: 12px;
+				align-items: center;
+				font-size: 16px;
+				line-height: 160%;
+
+				>p {
+					font-weight: 900;
+					font-size: 46px;
+					line-height: 130%;
+				}
+			}
+
+			>div {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $primary;
 			}
 		}
 	}

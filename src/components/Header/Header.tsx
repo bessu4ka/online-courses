@@ -4,7 +4,7 @@ import styled from './Header.module.scss';
 
 const Header = () => {
   return (
-    	<header>
+    <header className={styled.container}>
       <Navbar />
     </header>
   );
