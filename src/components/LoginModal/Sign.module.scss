@@ -1,0 +1,121 @@
+@import 'scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 4px;
+
+	.title {
+		@include modal-title-login;
+		margin: 48px 0 24px 0
+	}
+
+	.text {
+		@include modal-text-login;
+		max-width: 390px;
+		text-align: center;
+		margin-bottom: 24px;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+
+		.fieldWrapper {
+			display: flex;
+			flex-direction: column;
+
+			.input {
+				width: 390px;
+				height: 44px;
+				border: 1px solid $gray400;
+				border-radius: 4px;
+				font-size: 14px;
+				line-height: 150%;
+				padding: 0 16px 0 16px;
+
+				&::-webkit-input-placeholder {
+					font-size: 14px;
+					line-height: 150%;
+					color: $gray600;
+				}
+
+				&::-moz-placeholder {
+					font-size: 14px;
+					line-height: 150%;
+					color: $gray600;
+				}
+
+				&:-ms-input-placeholder {
+					font-size: 14px;
+					line-height: 150%;
+					color: $gray600;
+				}
+
+				&::-ms-input-placeholder {
+					font-size: 14px;
+					line-height: 150%;
+					color: $gray600;
+				}
+
+				&::placeholder {
+					font-size: 14px;
+					line-height: 150%;
+					color: $gray600;
+				}
+			}
+
+			.errorInput {
+				@extend .input;
+			}
+		}
+	}
+
+	.signBtnWrapper {
+		font-size: 14px;
+		line-height: 150%;
+		color: $gray800;
+		margin: 24px 200px 48px 0;
+
+		.signBtn {
+			cursor: pointer;
+			color: $primary;
+		}
+	}
+
+	//!SignIn
+	.infoWrapper {
+		display: flex;
+		align-items: center;
+		width: 390px;
+		justify-content: space-between;
+		margin: 20px 0 24px 0;
+
+		.forgot {
+			color: $primary;
+			cursor: pointer;
+		}
+	}
+
+	// !----------------
+
+	.inputWrapper {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	// !SignUp
+	.infoWrapperSignUp {
+		display: flex;
+		width: 390px;
+		margin: 20px 0 24px 0
+	}
+
+	// !----------------
+
+	.buttonWrapper {
+		width: 390px;
+	}
+}

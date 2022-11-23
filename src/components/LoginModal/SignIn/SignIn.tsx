@@ -2,9 +2,11 @@ import { Formik, Form, Field } from 'formik';
 import { FC } from 'react';
 
 import { validationSchemaSignIn } from 'utils/validationSchema';
+import { RegularButton } from 'components/Buttons/RegularButton';
+import { Checkbox } from 'components/Checkbox';
 import { TextError } from '../TextError';
 
-import styled from './SignIn.module.scss';
+import styled from '../Sign.module.scss';
 
 interface IProps {
   goToSignUp: () => void;
@@ -27,7 +29,7 @@ function onSubmit(values: IInitialValues): void {
 const SignIn: FC<IProps> = ({ goToSignUp }) => {
   return (
     <div className={styled.container}>
-      <h3 className={styled.title}>SignIn</h3>
+      <h3 className={styled.title}>Sign in</h3>
       <p className={styled.text}>
         Sign in to your account using email and password provided during registration.
       </p>
@@ -73,6 +75,18 @@ const SignIn: FC<IProps> = ({ goToSignUp }) => {
           </Form>
         )}
       </Formik>
+
+      <div className={styled.infoWrapper}>
+        <div className={styled.inputWrapper}>
+          <Checkbox />
+          <p>Keep me signed in</p>
+        </div>
+        <p className={styled.forgot}>Forgot password?</p>
+      </div>
+
+      <div className={styled.buttonWrapper}>
+        <RegularButton title='Sign in' />
+      </div>
 
       <div className={styled.signBtnWrapper}>
         <span>Don't have an account? </span>

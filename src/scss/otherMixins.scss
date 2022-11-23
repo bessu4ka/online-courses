@@ -6,3 +6,10 @@
 	line-height: 160%;
 	text-transform: capitalize;
 }
+
+@mixin checkbox {
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	border-radius: 3px;
+}

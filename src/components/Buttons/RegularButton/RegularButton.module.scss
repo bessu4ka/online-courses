@@ -1,0 +1,7 @@
+@import 'scss';
+
+.container {
+	@include basic-button;
+	height: 44px;
+	font-size: 14px;
+}

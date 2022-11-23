@@ -1,0 +1,21 @@
+@import 'scss';
+
+.checked {
+	@include checkbox;
+	background-color: $primary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	>svg {
+		display: block;
+		width: 10px;
+		height: 8px;
+	}
+}
+
+.notChecked {
+	@include checkbox;
+	background-color: $white;
+	border: 1px solid $primary;
+}
