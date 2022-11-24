@@ -13,3 +13,17 @@
 	height: 16px;
 	border-radius: 3px;
 }
+
+@mixin title-h2 {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+	color: $gray900;
+}
+
+@mixin title-h3 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 150%;
+	color: $gray900;
+}

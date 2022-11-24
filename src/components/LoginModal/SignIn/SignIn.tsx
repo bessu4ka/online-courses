@@ -54,7 +54,7 @@ const SignIn: FC<IProps> = ({ goToSignUp }) => {
                 placeholder='Your working email'
               />
               {errors.email && touched.email ? (
-                <TextError>{errors.email}</TextError>
+                <TextError>{errors.password}</TextError>
               ) : null}
             </div>
 
@@ -67,7 +67,9 @@ const SignIn: FC<IProps> = ({ goToSignUp }) => {
                 type='password'
                 id='password'
                 name='password'
+                placeholder='Password'
               />
+              {errors.password}
               {errors.password && touched.password ? (
                 <TextError>{errors.password}</TextError>
               ) : null}

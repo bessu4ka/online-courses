@@ -1,0 +1,47 @@
+@import 'scss';
+
+.container {
+	display: flex;
+	gap: 135px;
+
+	h3 {
+		@include title-h3;
+	}
+
+	h2 {
+		@include title-h2;
+		margin: 8px 0 40px 0;
+	}
+
+	.ListWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.ListElement {
+			display: flex;
+			gap: 16px;
+
+			.icon {
+				width: 16px;
+				height: 16px;
+				display: block;
+				margin-top: 5px;
+			}
+
+			>p {
+				font-size: 16px;
+				line-height: 160%;
+				max-width: 358px;
+				max-height: 52px;
+				overflow: hidden;
+				color: $gray800;
+			}
+		}
+
+		.btnWrapper {
+			margin-top: 48px;
+			width: 161px;
+		}
+	}
+}

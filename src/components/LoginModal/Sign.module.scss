@@ -26,6 +26,13 @@
 			display: flex;
 			flex-direction: column;
 
+			>label {
+				margin-bottom: 8px;
+				font-size: 14px;
+				line-height: 150%;
+				color: $gray800;
+			}
+
 			.input {
 				width: 390px;
 				height: 44px;
@@ -34,6 +41,7 @@
 				font-size: 14px;
 				line-height: 150%;
 				padding: 0 16px 0 16px;
+				margin-bottom: 20px;
 
 				&::-webkit-input-placeholder {
 					font-size: 14px;
@@ -68,6 +76,14 @@
 
 			.errorInput {
 				@extend .input;
+				border: 1px solid $danger;
+				background: url(../../images/modal/error-input.svg);
+				background-repeat: no-repeat;
+				background-position: right 13px top 13px;
+
+				// &:focus {
+				// box-shadow: $focus-field-error;
+				// }
 			}
 		}
 	}
@@ -90,7 +106,7 @@
 		align-items: center;
 		width: 390px;
 		justify-content: space-between;
-		margin: 20px 0 24px 0;
+		margin: 0 0 24px 0;
 
 		.forgot {
 			color: $primary;
@@ -110,7 +126,7 @@
 	.infoWrapperSignUp {
 		display: flex;
 		width: 390px;
-		margin: 20px 0 24px 0
+		margin: 0 0 24px 0
 	}
 
 	// !----------------

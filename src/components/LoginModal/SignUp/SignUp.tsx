@@ -91,6 +91,7 @@ const SignUp: FC<IProps> = ({ goToSignIn }) => {
                 type='password'
                 id='password'
                 name='password'
+                placeholder='Password'
               />
               {errors.password && touched.password ? (
                 <TextError>{errors.password}</TextError>
@@ -109,6 +110,7 @@ const SignUp: FC<IProps> = ({ goToSignIn }) => {
                 type='password'
                 id='confirmPassword'
                 name='confirmPassword'
+                placeholder='Confirm password'
               />
               {errors.confirmPassword && touched.confirmPassword ? (
                 <TextError>{errors.confirmPassword}</TextError>
@@ -130,7 +132,7 @@ const SignUp: FC<IProps> = ({ goToSignIn }) => {
       </div>
 
       <div className={styled.signBtnWrapper}>
-        <span>Don't have an account? </span>
+        <span>Already have an account? </span>
         <span className={styled.signBtn} onClick={goToSignIn}>
           Sign in
         </span>
