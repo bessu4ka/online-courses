@@ -1,0 +1,98 @@
+@import 'scss';
+
+.container {
+	width: 600px;
+	height: 214px;
+	display: flex;
+	box-shadow: $small;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: $regular;
+	}
+
+	.imageWrapper {
+		position: relative;
+
+		.imageSubstrate {
+			background-color: $secondary;
+			width: 214px;
+			height: 214px;
+
+			.circle_1 {
+				width: 214px;
+				height: 214px;
+				border: 10px solid $secondary-light;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.circle_2 {
+				width: 150px;
+				height: 150px;
+				border: 15px solid $secondary-light;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.circle_3 {
+				width: 80px;
+				height: 80px;
+				border: 20px solid $secondary-light;
+				border-radius: 50%;
+			}
+		}
+
+		.image {
+			height: 180px;
+			position: absolute;
+			top: 34px;
+			left: 40px;
+		}
+	}
+
+	.info {
+		width: 100%;
+		border: 1px solid $gray300;
+		border-left: none;
+		border-radius: 0 4px 4px 0;
+		padding: 32px 0 0 32px;
+
+		>div {
+			font-size: 14px;
+			line-height: 150%;
+			color: $white;
+			background-color: $pink;
+			display: inline-block;
+			height: 23px;
+			border-radius: 4px;
+			padding: 0 8px 0 8px;
+		}
+
+		>h3 {
+			font-weight: 700;
+			font-size: 20px;
+			color: $gray900;
+			line-height: 150%;
+			width: 322px;
+			height: 60px;
+			overflow: hidden;
+			margin: 20px 0 20px 0;
+		}
+
+		>p {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 150%;
+			color: $danger;
+
+			>span {
+				color: $gray700;
+			}
+		}
+	}
+}

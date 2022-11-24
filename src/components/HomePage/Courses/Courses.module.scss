@@ -1,0 +1,31 @@
+@import 'scss';
+
+.container {
+	h3 {
+		@include title-h3;
+	}
+
+	h2 {
+		@include title-h2;
+	}
+
+	aside {
+		width: 1230px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		margin-bottom: 60px;
+
+		.btnWrapper {
+			width: 202px;
+		}
+	}
+
+	.ListWrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+}
