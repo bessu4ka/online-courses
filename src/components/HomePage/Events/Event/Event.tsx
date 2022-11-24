@@ -1,24 +1,31 @@
+import { FC } from 'react';
+
 import { OutlineRegularButton } from 'components/Buttons/OutlineRegularButton';
 
 import styled from './Event.module.scss';
 
-const Event = () => {
+interface IProps {
+  number: string;
+  month: string;
+  time: string;
+  title: string;
+  format: string;
+}
+
+const Event: FC<IProps> = ({ number, month, time, title, format }) => {
   return (
     <div className={styled.container}>
       <article className={styled.dateWrapper}>
-        <div className={styled.date}>05</div>
+        <div className={styled.date}>{number}</div>
         <div className={styled.monthWrapper}>
-          <div className={styled.month}>August</div>
-          <div className={styled.time}>11:00 – 14:00</div>
+          <div className={styled.month}>{month}</div>
+          <div className={styled.time}>{time}</div>
         </div>
       </article>
 
       <article className={styled.info}>
-        <h5>
-          Formation of the organizational structure of the company in the face of
-          uncertainty.
-        </h5>
-        <p>Online master-class</p>
+        <h5>{title}</h5>
+        <p>{format}</p>
       </article>
 
       <div className={styled.btnWrapper}>

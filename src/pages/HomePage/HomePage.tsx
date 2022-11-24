@@ -2,7 +2,7 @@ import { About } from 'components/HomePage/About';
 import { Benefits } from 'components/HomePage/Benefits';
 import { Courses } from 'components/HomePage/Courses';
 import { Events } from 'components/HomePage/Events';
-import { Header } from 'components/HomePage/Heder';
+import { Header } from 'components/HomePage/Header';
 
 import styled from './HomePage.module.scss';
 

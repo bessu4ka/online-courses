@@ -1,3 +1,47 @@
-.container {
+@import 'scss';
 
+.container {
+	padding-bottom: 80px;
+	background: $bg-opacity;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h3 {
+		@include title-h3;
+		text-align: center;
+		margin-top: 80px;
+	}
+
+	h2 {
+		@include title-h2;
+		text-align: center;
+		margin: 8px 0 60px 0;
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.more {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+		margin-top: 60px;
+
+		>p {
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 150%;
+			color: $gray900;
+		}
+
+		.btnWrapper {
+			width: 214px;
+		}
+	}
 }
