@@ -1,4 +1,5 @@
 import { About } from 'components/HomePage/About';
+import { Benefits } from 'components/HomePage/Benefits';
 import { Courses } from 'components/HomePage/Courses';
 import { Header } from 'components/HomePage/Heder';
 
@@ -10,6 +11,7 @@ const HomePage = () => {
       <Header />
       <About />
       <Courses />
+      <Benefits />
     </div>
   );
 };

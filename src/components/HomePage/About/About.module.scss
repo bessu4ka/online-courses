@@ -3,6 +3,7 @@
 .container {
 	display: flex;
 	gap: 135px;
+	margin: 180px 0;
 
 	h3 {
 		@include title-h3;

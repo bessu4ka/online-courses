@@ -1,0 +1,103 @@
+@import 'scss';
+
+.container {
+	max-width: 1230px;
+	margin-bottom: 120px;
+
+	h3 {
+		@include title-h3;
+		text-align: center;
+		margin: 180px 0 8px 0;
+	}
+
+	h2 {
+		@include title-h2;
+		text-align: center;
+	}
+
+	>article {
+		display: flex;
+		margin: 60px 0;
+
+		>div {
+			display: flex;
+			width: 25%;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			cursor: pointer;
+			height: 46px;
+			border-radius: 4px;
+
+			&:hover {
+				box-shadow: $small;
+			}
+
+			.icon {
+				width: 16px;
+				height: 16px;
+				fill: $gray600;
+			}
+
+			.activeIcon {
+				@extend .icon;
+				fill: $primary;
+			}
+
+			.title {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 160%;
+				color: $gray600;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			.activeTitle {
+				@extend .title;
+				color: $primary;
+			}
+		}
+
+		.activeTab {
+			border: 1px solid $primary;
+		}
+	}
+
+	aside {
+		width: 1230px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		>div {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			>h4 {
+				font-weight: 900;
+				font-size: 32px;
+				line-height: 130%;
+				color: $gray900;
+			}
+
+			>p {
+				width: 495px;
+				height: 130px;
+				overflow: hidden;
+				font-size: 16px;
+				line-height: 160%;
+				color: $gray800;
+			}
+		}
+
+		>img {
+			width: 600px;
+			height: 440px;
+			display: block;
+		}
+	}
+}
