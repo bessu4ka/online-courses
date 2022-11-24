@@ -1,0 +1,12 @@
+@import 'scss';
+
+.container {
+	@include outline-button;
+	height: 44px;
+	font-size: 14px;
+
+	&:hover {
+		background: $btn-gradient;
+		color: $white;
+	}
+}
