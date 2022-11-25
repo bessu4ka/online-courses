@@ -4,6 +4,7 @@ import { Certificate } from 'components/HomePage/Certificate';
 import { Courses } from 'components/HomePage/Courses';
 import { Events } from 'components/HomePage/Events';
 import { Header } from 'components/HomePage/Header';
+import { Team } from 'components/HomePage/Team';
 
 import styled from './HomePage.module.scss';
 
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Benefits />
       <Events />
       <Certificate />
+      <Team />
     </div>
   );
 };

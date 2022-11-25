@@ -11,6 +11,7 @@ import certificate from './certificate.png';
 import courses_1 from './courses_1.png';
 import courses_2 from './courses_2.png';
 import courses_3 from './courses_3.png';
+import courses_4 from './courses_4.png';
 import subscribe from './subscribe.png';
 
 export {
@@ -27,5 +28,6 @@ export {
   courses_1,
   courses_2,
   courses_3,
+  courses_4,
   subscribe,
 };
