@@ -1,0 +1,87 @@
+@import 'scss';
+
+.container {
+	width: 390px;
+	height: 507px;
+
+	.posterWrapper {
+		position: relative;
+
+		>img {
+			width: 390px;
+			height: 300px;
+			display: block;
+		}
+
+		.infoWrapper {
+			background-color: $white;
+			height: 23px;
+			padding: 0 8px;
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+	}
+
+	.iconDateWrapper {
+		font-size: 14px;
+		line-height: 150%;
+		color: $gray700;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin: 16px 0 8px 0;
+
+		.timeWrapper {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+
+
+	}
+
+	>h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 150%;
+		color: $gray900;
+	}
+
+	>p {
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray800;
+		margin: 8px 0 16px 0;
+	}
+
+	.btnWrapper {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		cursor: pointer;
+
+		>p {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 160%;
+			color: $gray900;
+		}
+
+		>svg {
+			width: 24px;
+			height: 24px;
+			fill: $primary;
+		}
+	}
+
+	.icon {
+		width: 16px;
+		height: 16px;
+		display: block;
+	}
+}

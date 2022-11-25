@@ -1,5 +1,6 @@
 import { About } from 'components/HomePage/About';
 import { Benefits } from 'components/HomePage/Benefits';
+import { Blog } from 'components/HomePage/Blog';
 import { Certificate } from 'components/HomePage/Certificate';
 import { Courses } from 'components/HomePage/Courses';
 import { Events } from 'components/HomePage/Events';
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Certificate />
       <Team />
       <Testimonials />
+      <Blog />
     </div>
   );
 };

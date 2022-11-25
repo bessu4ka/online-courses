@@ -16,6 +16,9 @@ import subscribe from './subscribe.png';
 import user_1 from './user_1.jpg';
 import user_2 from './user_2.jpg';
 import user_3 from './user_3.jpg';
+import post_1 from './post_1.png';
+import post_2 from './post_2.png';
+import post_3 from './post_3.png';
 
 export {
   headVector,
@@ -36,4 +39,7 @@ export {
   user_1,
   user_2,
   user_3,
+  post_1,
+  post_2,
+  post_3,
 };

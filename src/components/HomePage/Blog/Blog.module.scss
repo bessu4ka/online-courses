@@ -1,0 +1,14 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+
+	.headWrapper{
+		
+	}
+
+	.postsWrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+}
