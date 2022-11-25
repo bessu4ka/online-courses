@@ -1,0 +1,17 @@
+@import 'scss';
+
+.container {
+	margin-bottom: 95px;
+
+	h3 {
+		@include title-h3;
+		text-align: center
+	}
+
+	h2 {
+		@include title-h2;
+		text-align: center;
+		margin: 8px 0 60px 0;
+	}
+
+}

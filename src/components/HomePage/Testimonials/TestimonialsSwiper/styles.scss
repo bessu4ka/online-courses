@@ -1,0 +1,15 @@
+@import 'scss';
+
+.swiper-pagination-bullet {
+	width: 30px;
+	height: 3px;
+	border-radius: 15px;
+	position: relative;
+	top: 12px;
+	left: 0;
+}
+
+// active
+.swiper-pagination-bullet-active {
+	background: $gray800;
+}

@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 // React-Swiper-styles
 import 'swiper/css';
+
 // ------------------------
 import { courses_1, courses_2, courses_3, courses_4 } from 'images/homePage';
 import { Slide } from './Slide';

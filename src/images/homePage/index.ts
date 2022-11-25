@@ -13,6 +13,9 @@ import courses_2 from './courses_2.png';
 import courses_3 from './courses_3.png';
 import courses_4 from './courses_4.png';
 import subscribe from './subscribe.png';
+import user_1 from './user_1.jpg';
+import user_2 from './user_2.jpg';
+import user_3 from './user_3.jpg';
 
 export {
   headVector,
@@ -30,4 +33,7 @@ export {
   courses_3,
   courses_4,
   subscribe,
+  user_1,
+  user_2,
+  user_3,
 };

@@ -5,6 +5,7 @@ import { Courses } from 'components/HomePage/Courses';
 import { Events } from 'components/HomePage/Events';
 import { Header } from 'components/HomePage/Header';
 import { Team } from 'components/HomePage/Team';
+import { Testimonials } from 'components/HomePage/Testimonials';
 
 import styled from './HomePage.module.scss';
 
@@ -18,6 +19,7 @@ const HomePage = () => {
       <Events />
       <Certificate />
       <Team />
+      <Testimonials />
     </div>
   );
 };
