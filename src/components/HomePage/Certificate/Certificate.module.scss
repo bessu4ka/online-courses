@@ -1,0 +1,46 @@
+@import 'scss';
+
+.container {
+	display: flex;
+	width: 1230px;
+	justify-content: space-between;
+	margin: 120px 0;
+
+	aside {
+		width: 397px;
+		height: 334px;
+
+		h3 {
+			@include title-h3;
+		}
+
+		h2 {
+			@include title-h2;
+			margin: 8px 0 48px 0;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 160%;
+			color: $gray800;
+			margin-bottom: 32px;
+		}
+
+		.logoWrapper {
+			display: flex;
+			justify-content: space-between;
+
+			.logo {
+				width: 105px;
+				height: 50px;
+				display: block;
+				cursor: pointer;
+			}
+		}
+	}
+
+	>img {
+		display: block;
+		width: 705px;
+	}
+}

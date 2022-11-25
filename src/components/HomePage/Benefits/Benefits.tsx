@@ -28,6 +28,7 @@ const Benefits = () => {
         {data.map(({ icon, title }, index) => {
           return (
             <div
+              key={index}
               className={activeTab === index ? styled.activeTab : null}
               onClick={() => changeActiveTab(index)}>
               <svg className={activeTab === index ? styled.activeIcon : styled.icon}>
