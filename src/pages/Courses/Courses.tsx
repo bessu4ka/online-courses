@@ -3,9 +3,11 @@ import { Certificate } from 'components/HomePage/Certificate';
 import { Subscribe } from 'components/HomePage/Subscribe';
 import { Testimonials } from 'components/HomePage/Testimonials';
 
+import styled from './Courses.module.scss';
+
 const Courses = () => {
   return (
-    <div>
+    <div className={styled.container}>
       <CoursesBlock />
       <Testimonials />
       <Certificate />

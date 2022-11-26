@@ -1,96 +1,126 @@
 @import 'scss';
 
 .container {
-
+	width: 1230px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 120px;
 
-	.content {
-		width: 1230px;
+	h3 {
+		@include title-h3;
+		text-align: center;
+		margin: 152px 0 8px 0;
+	}
 
-		h3 {
-			@include title-h3;
-			text-align: center;
-			margin: 152px 0 8px 0;
-		}
+	h2 {
+		@include title-h2;
+		text-align: center;
+		margin-bottom: 60px;
+	}
 
-		h2 {
-			@include title-h2;
-			text-align: center;
-			margin-bottom: 60px;
-		}
+	.menu {
+		display: flex;
+		justify-content: space-between;
 
-		.menu {
+		.tabsWrapper {
 			display: flex;
-			justify-content: space-between;
+			gap: 10px;
 
-			.tabsWrapper {
+			.tab {
+				height: 46px;
+				padding: 0 20px;
 				display: flex;
-				gap: 10px;
+				align-items: center;
+				border-radius: 4px;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
 
-				.tab {
-					height: 46px;
-					padding: 0 20px;
-					display: flex;
-					align-items: center;
-					border-radius: 4px;
-					cursor: pointer;
-					user-select: none;
-
-					>p {
-						font-weight: 700;
-						font-size: 16px;
-						line-height: 160%;
-						color: $gray600;
-					}
-
-					>span {
-						font-weight: 900;
-						font-size: 10px;
-						line-height: 150%;
-						color: $gray600;
-						position: relative;
-						top: -5px;
-						left: 5px;
-					}
+				>p {
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 160%;
+					color: $gray600;
 				}
 
-				.activeTab {
-					@extend .tab;
-					border: 1px solid $primary;
-
-					>p {
-						color: $primary;
-					}
-
-					>span {
-						color: $primary;
-					}
+				>span {
+					font-weight: 900;
+					font-size: 10px;
+					line-height: 150%;
+					color: $gray600;
+					position: relative;
+					top: -5px;
+					left: 5px;
 				}
 			}
 
-			.inputWrapper {
-				display: inline-block;
-				position: relative;
+			.activeTab {
+				@extend .tab;
+				border: 1px solid $primary;
 
-				>input {
-					width: 315px;
-					height: 44px;
-					padding: 0 16px;
-					border: 1px solid $gray400;
-					border-radius: 4px;
+				>p {
+					color: $primary;
 				}
 
-				>svg {
-					width: 16px;
-					height: 16px;
-					fill: $gray600;
-					position: absolute;
-					top: 14px;
-					right: 15px;
-					cursor: text;
+				>span {
+					color: $primary;
 				}
 			}
 		}
+
+		.inputWrapper {
+			display: inline-block;
+			position: relative;
+
+			>input {
+				width: 315px;
+				height: 44px;
+				padding: 0 16px;
+				border: 1px solid $gray400;
+				border-radius: 4px;
+			}
+
+			>svg {
+				width: 16px;
+				height: 16px;
+				fill: $gray600;
+				position: absolute;
+				top: 14px;
+				right: 15px;
+				cursor: text;
+				display: block;
+			}
+		}
+	}
+
+	>ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		margin: 60px 0 80px 0;
+	}
+}
+
+.more {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	>svg {
+		width: 24px;
+		height: 24px;
+		display: block;
+	}
+
+	>p {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray800;
 	}
 }
