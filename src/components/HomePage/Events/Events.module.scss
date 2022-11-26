@@ -8,6 +8,11 @@
 	flex-direction: column;
 	align-items: center;
 
+	background-image: url(../../../assets/backgroundSVGs/circles-events.svg),
+		url(../../../assets/backgroundSVGs/dots-events.svg);
+	background-repeat: no-repeat;
+	background-position: top right, bottom left;
+
 	h3 {
 		@include title-h3;
 		text-align: center;
