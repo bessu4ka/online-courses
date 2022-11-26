@@ -5,6 +5,7 @@ import { Certificate } from 'components/HomePage/Certificate';
 import { Courses } from 'components/HomePage/Courses';
 import { Events } from 'components/HomePage/Events';
 import { Header } from 'components/HomePage/Header';
+import { Subscribe } from 'components/HomePage/Subscribe';
 import { Team } from 'components/HomePage/Team';
 import { Testimonials } from 'components/HomePage/Testimonials';
 
@@ -22,6 +23,7 @@ const HomePage = () => {
       <Team />
       <Testimonials />
       <Blog />
+      <Subscribe />
     </div>
   );
 };

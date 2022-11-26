@@ -1,0 +1,37 @@
+@import 'scss';
+
+.container {
+	width: 100%;
+	background-color: $bg-opacity;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 564px;
+
+	background-image: url(../../../images/homePage/subscribe.png),
+		url(../../../images/homePage/subscribe.png);
+	background-repeat: no-repeat;
+	background-position: bottom left, bottom right;
+
+	h3 {
+		@include title-h3;
+		margin-top: 120px
+	}
+
+	h2 {
+		@include title-h2;
+		width: 810px;
+		height: 120px;
+		text-align: center;
+		margin: 8px 0 60px 0;
+	}
+
+	.form {
+		display: flex;
+		gap: 24px;
+
+		.btnWrapper {
+			width: 154px;
+		}
+	}
+}

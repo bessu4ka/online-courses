@@ -44,7 +44,7 @@ const Blog = () => {
   return (
     <div className={styled.container}>
       <div className={styled.headWrapper}>
-        <div>
+        <div className={styled.titleWrapper}>
           <h3>Our blog</h3>
           <h2>Latest posts</h2>
         </div>

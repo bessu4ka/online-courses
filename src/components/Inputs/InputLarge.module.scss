@@ -1,0 +1,18 @@
+@import 'scss';
+
+.container {
+	background-color: $white;
+	width: 422px;
+	height: 52px;
+	border-radius: 4px;
+	padding: 0 16px;
+	font-size: 16px;
+	line-height: 160%;
+	color: $gray800;
+
+	&::placeholder {
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray600;
+	}
+}
