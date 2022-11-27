@@ -1,0 +1,97 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	margin-top: 152px;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	.contacts {
+		h3 {
+			@include title-h3;
+		}
+
+		h2 {
+			@include title-h2;
+			margin: 8px 0 40px 0;
+		}
+
+		.contactsData {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			margin-bottom: 48px;
+			fill: $primary;
+
+			.contactWrapper {
+				display: flex;
+				gap: 12px;
+
+				.contactsIcon {
+					width: 24px;
+					height: 24px;
+					display: block;
+				}
+
+				>article {
+					display: flex;
+					flex-direction: column;
+
+					.fieldName {
+						font-weight: 700;
+						font-size: 14px;
+						line-height: 150%;
+						color: $gray700;
+					}
+
+					.field {
+						font-size: 18px;
+						line-height: 150%;
+						color: gray900;
+					}
+				}
+			}
+		}
+
+		.socialsData {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			.followUs {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 150%;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: $gray900;
+			}
+
+			.socialsIconWrapper {
+				display: flex;
+				gap: 32px;
+
+				.icon {
+					width: 24px;
+					height: 24px;
+					display: block;
+					fill: $gray700;
+					cursor: pointer;
+
+					&:hover {
+						fill: $gray800;
+					}
+				}
+			}
+		}
+	}
+
+	.map {
+		width: 706px;
+		height: 412px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

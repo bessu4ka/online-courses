@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 import { LargeButton } from 'components/Buttons/LargeButton';
@@ -11,6 +11,7 @@ import styled from './Navbar.module.scss';
 
 const Navbar = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const navigate = useNavigate();
 
   function openModal() {
     setIsOpenModal(true);
@@ -28,7 +29,7 @@ const Navbar = () => {
       />
 
       <nav className={styled.container}>
-        <svg className={styled.logo}>
+        <svg className={styled.logo} onClick={() => navigate('/')}>
           <use href={sprite + '#logo'}></use>
         </svg>
 
