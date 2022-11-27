@@ -1,1 +1,19 @@
-.container {}
+@import 'scss';
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+
+	>p {
+		font-size: 40px;
+		color: $gray600;
+	}
+
+	.btnWrapper {
+		width: 200px;
+	}
+}
