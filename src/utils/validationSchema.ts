@@ -28,3 +28,11 @@ export const validationSchemaSignUn = Yup.object().shape({
     .required('Confirm the password')
     .oneOf([Yup.ref('password')], 'Your passwords do not match.'),
 });
+
+export const validationSchemaContactForm = Yup.object().shape({
+  firsName: Yup.string().required('Required field'),
+  secondName: Yup.string().required('Required field'),
+  email: Yup.string().required('Required field'),
+  phone: Yup.string(),
+  message: Yup.string().required('Required field'),
+});

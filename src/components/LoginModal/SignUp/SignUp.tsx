@@ -47,7 +47,7 @@ const SignUp: FC<IProps> = ({ goToSignIn }) => {
         }}>
         {({ errors, touched }) => (
           <Form className={styled.form}>
-            {/* //!fool name */}
+            {/* //!full name */}
             <div className={styled.fieldWrapper}>
               <label htmlFor='email'>Full Name</label>
               <Field
