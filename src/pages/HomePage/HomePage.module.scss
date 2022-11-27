@@ -1,7 +1,5 @@
 @import 'scss';
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include page-default;
 }
