@@ -1,4 +1,5 @@
 import { About } from 'components/CourseDetailsPage/About';
+import { CTA } from 'components/CourseDetailsPage/CTA';
 import { Curator } from 'components/CourseDetailsPage/Curator';
 import { PageTitle } from 'components/CourseDetailsPage/PageTitle';
 import { Steps } from 'components/CourseDetailsPage/Steps';
@@ -12,6 +13,7 @@ const CourseDetails = () => {
       <About />
       <Curator />
       <Steps />
+      <CTA />
     </main>
   );
 };

@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 
+import { CardElement } from './CardElement';
 import { courses_1, courses_2, courses_3, courses_4 } from 'images/homePage';
 import sprite from 'images/sprite.svg';
 
 import styled from './CoursesBlock.module.scss';
-import { CardElement } from './CardElement';
 
 const tabs = [
   { title: 'All', count: 17 },
@@ -17,6 +17,7 @@ const tabs = [
 
 const cardData = [
   {
+    id: 1,
     photo: courses_1,
     course: 'Marketing',
     title: 'Brand Management & PR Communications',
@@ -24,6 +25,7 @@ const cardData = [
     name: 'Kristin Watson',
   },
   {
+    id: 2,
     photo: courses_2,
     course: 'Design',
     title: 'Graphic Design Basic',
@@ -31,6 +33,7 @@ const cardData = [
     name: 'Guy Hawkins',
   },
   {
+    id: 3,
     photo: courses_3,
     course: 'Management',
     title: 'Business Development Management',
@@ -38,6 +41,7 @@ const cardData = [
     name: 'Dianne Russell',
   },
   {
+    id: 4,
     photo: courses_4,
     course: 'Development',
     title: 'Highload Software Architecture',
@@ -45,6 +49,7 @@ const cardData = [
     name: 'Brooklyn Simmons',
   },
   {
+    id: 5,
     photo: courses_1,
     course: 'HR & Recruting',
     title: 'Human Resources – Selection and Recruitment',
@@ -52,6 +57,7 @@ const cardData = [
     name: 'Kathryn Murphy',
   },
   {
+    id: 6,
     photo: courses_2,
     course: 'Marketing',
     title: 'Brand Management & PR Communications',
@@ -59,6 +65,7 @@ const cardData = [
     name: 'Kristin Watson',
   },
   {
+    id: 7,
     photo: courses_3,
     course: 'Design',
     title: 'User Experience. Human-centered Design',
@@ -66,6 +73,7 @@ const cardData = [
     name: ' Cody Fisher',
   },
   {
+    id: 8,
     photo: courses_4,
     course: 'Marketing',
     title: 'Brand Management & PR Communications',
@@ -73,6 +81,7 @@ const cardData = [
     name: 'Kristin Watson',
   },
   {
+    id: 9,
     photo: courses_1,
     course: 'Marketing',
     title: 'Brand Management & PR Communications',
@@ -122,9 +131,10 @@ const CoursesBlock = () => {
       </aside>
 
       <ul>
-        {cardData.map(({ photo, course, title, price, name }, index) => {
+        {cardData.map(({ id, photo, course, title, price, name }, index) => {
           return (
             <CardElement
+              id={id}
               key={index}
               photo={photo}
               course={course}

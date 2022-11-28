@@ -1,0 +1,111 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	height: 243px;
+	background-color: $bg-opacity;
+	background-image: url(../../../assets/backgroundSVGs/circles-courses_2.svg);
+	background-repeat: no-repeat;
+	background-position: top right 355px;
+	color: $gray900;
+	padding: 48px 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h3 {
+			font-weight: 900;
+			font-size: 32px;
+			line-height: 130%;
+		}
+
+		.time {
+			display: flex;
+			gap: 24px;
+
+			.date {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+
+				>p {
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 130%;
+				}
+
+				>span {
+					font-size: 12px;
+					line-height: 150%;
+				}
+			}
+		}
+	}
+
+	.form {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.inputWrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			>label {
+				font-size: 14px;
+				line-height: 150%;
+				color: $gray800;
+			}
+
+			>input {
+				background-color: $white;
+				border: 1px solid $gray400;
+				padding: 0 16px;
+				color: gray800;
+				font-size: 14px;
+				line-height: 150%;
+				width: 291px;
+				height: 44px;
+				border-radius: 4px;
+
+				[type='number'] {
+					-moz-appearance: textfield;
+				}
+
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+				}
+
+				&::-webkit-input-placeholder {
+					color: gray600;
+				}
+
+				&::-moz-placeholder {
+					color: gray600;
+				}
+
+				&:-ms-input-placeholder {
+					color: gray600;
+				}
+
+				&::-ms-input-placeholder {
+					color: gray600;
+				}
+
+				&::placeholder {
+					color: gray600;
+				}
+			}
+		}
+
+		.btnWrapper {
+			width: 166px;
+		}
+	}
+}
