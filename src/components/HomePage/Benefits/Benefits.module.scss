@@ -28,9 +28,13 @@
 			cursor: pointer;
 			height: 46px;
 			border-radius: 4px;
+			border: 1px solid transparent;
+			transition: ease 0.2s;
 
 			&:hover {
 				box-shadow: $small;
+				transition: ease 0.2s;
+				border: 1px solid $info;
 			}
 
 			.icon {
