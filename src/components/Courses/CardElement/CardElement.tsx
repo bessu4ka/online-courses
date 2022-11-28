@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import styled from './CardElement.module.scss';
 
@@ -8,11 +9,18 @@ interface IProps {
   title: string;
   price: string;
   name: string;
+  id: number;
 }
 
-const CardElement: FC<IProps> = ({ photo, course, title, price, name }) => {
+const CardElement: FC<IProps> = ({ id, photo, course, title, price, name }) => {
+  const navigate = useNavigate();
+
+  function goToCourseDetails(id: number): void {
+    navigate(`/course-details?id=${id}`);
+  }
+
   return (
-    <div className={styled.container}>
+    <div className={styled.container} onClick={() => goToCourseDetails(id)}>
       <div className={styled.imageWrapper}>
         <div className={styled.circle_1}>
           <div className={styled.circle_2}>
