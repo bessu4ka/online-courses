@@ -29,6 +29,7 @@
 			gap: 10px;
 
 			.tab {
+				box-sizing: border-box;
 				height: 46px;
 				padding: 0 20px;
 				display: flex;
@@ -39,6 +40,13 @@
 				-moz-user-select: none;
 				-ms-user-select: none;
 				user-select: none;
+				border: 1px solid transparent;
+				transition: ease 0.2s;
+
+				&:hover {
+					transition: ease 0.2s;
+					border: 1px solid $info;
+				}
 
 				>p {
 					font-weight: 700;
@@ -77,11 +85,32 @@
 			position: relative;
 
 			>input {
+				color: $gray800;
 				width: 315px;
 				height: 44px;
-				padding: 0 16px;
+				padding: 0 35px 0 16px;
 				border: 1px solid $gray400;
 				border-radius: 4px;
+
+				&::-webkit-input-placeholder {
+					color: $gray600;
+				}
+
+				&::-moz-placeholder {
+					color: $gray600;
+				}
+
+				&:-ms-input-placeholder {
+					color: $gray600;
+				}
+
+				&::-ms-input-placeholder {
+					color: $gray600;
+				}
+
+				&::placeholder {
+					color: $gray600;
+				}
 			}
 
 			>svg {

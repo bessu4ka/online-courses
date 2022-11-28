@@ -6,9 +6,15 @@
 	display: flex;
 	box-shadow: $small;
 	cursor: pointer;
+	transition: linear 0.2s;
 
 	&:hover {
 		box-shadow: $regular;
+		transition: linear 0.3s;
+		box-shadow: $regular;
+		transform: scale(1.03);
+		-webkit-transform: scale(1.03);
+		-ms-transform: scale(1.03);
 	}
 
 	.imageWrapper {
