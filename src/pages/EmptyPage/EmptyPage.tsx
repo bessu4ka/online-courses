@@ -8,12 +8,12 @@ const EmptyPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={styled.container}>
+    <main className={styled.container}>
       <p>page not found</p>
       <div className={styled.btnWrapper} onClick={() => navigate(-1)}>
         <LargeButton title='Go back' />
       </div>
-    </div>
+    </main>
   );
 };
 

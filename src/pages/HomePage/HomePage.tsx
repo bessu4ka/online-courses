@@ -13,7 +13,7 @@ import styled from './HomePage.module.scss';
 
 const HomePage = () => {
   return (
-    <div className={styled.container}>
+    <main className={styled.container}>
       <Header />
       <About />
       <Courses />
@@ -24,7 +24,7 @@ const HomePage = () => {
       <Testimonials />
       <Blog />
       <Subscribe />
-    </div>
+    </main>
   );
 };
 
