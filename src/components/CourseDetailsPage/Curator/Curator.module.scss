@@ -1,0 +1,96 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 180px 0;
+
+	.substrate {
+		width: 495px;
+		height: 580px;
+		background-color: $secondary;
+		border-radius: 4px;
+		position: relative;
+
+		>img {
+			position: absolute;
+			top: -20px;
+			left: 20px;
+		}
+	}
+
+	.descriptionWrapper {
+		display: flex;
+		flex-direction: column;
+		width: 600px;
+
+		h3 {
+			@include title-h3;
+		}
+
+		h2 {
+			margin-top: 8px;
+			@include title-h2;
+		}
+
+		.position {
+			font-size: 20px;
+			line-height: 150%;
+			color: $gray700;
+			margin: 16px 0 32px 0;
+		}
+
+		.ratingWrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			.rating {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+
+				>svg {
+					width: 16px;
+					height: 16px;
+					display: block;
+					fill: $primary;
+				}
+
+				>span {
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 160%;
+					color: $gray800;
+				}
+			}
+		}
+
+		.description {
+			max-width: 600px;
+			font-size: 16px;
+			line-height: 160%;
+			max-height: 156px;
+			overflow: hidden;
+			margin: 32px 0 40px 0;
+		}
+
+		.socialsWrapper {
+			display: flex;
+			gap: 24px;
+
+			>svg {
+				width: 24px;
+				height: 24px;
+				display: block;
+				cursor: pointer;
+				fill: $gray700;
+
+				&:hover {
+					fill: $primary;
+				}
+			}
+		}
+	}
+}
