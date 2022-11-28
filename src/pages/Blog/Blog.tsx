@@ -1,7 +1,7 @@
 import styled from './Blog.module.scss';
 
 const Blog = () => {
-  return <div className={styled.container}>Blog</div>;
+  return <main className={styled.container}>Blog</main>;
 };
 
 export { Blog };

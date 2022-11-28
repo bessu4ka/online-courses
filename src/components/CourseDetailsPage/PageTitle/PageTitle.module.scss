@@ -1,0 +1,40 @@
+@import 'scss';
+
+.container {
+	height: 468px;
+	background-color: $bg-opacity;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// SVG - - - - - - - - - 
+	background-image: url(../../../assets/backgroundSVGs/arrow-diagonal.svg),
+		url(../../../assets/backgroundSVGs/circles-courses.svg),
+		url(../../../assets/backgroundSVGs/dots-courses.svg),
+		url(../../../assets/backgroundSVGs/half-circles-right.svg);
+	background-repeat: no-repeat;
+	background-position: bottom right 267px,
+		left bottom,
+		right top 123px,
+		top 128px left 172px;
+	// - - - - - - - - - - -  
+
+	h4 {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+		color: $primary;
+		margin: 192px 0 12px 0;
+	}
+
+	h1 {
+		font-weight: 900;
+		font-size: 46px;
+		line-height: 130%;
+		max-width: 1020px;
+		color: $gray900;
+		text-align: center;
+	}
+}

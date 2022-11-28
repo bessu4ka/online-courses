@@ -8,6 +8,7 @@ import { AboutUs } from 'pages/AboutUs';
 import { Events } from 'pages/Events';
 import { Blog } from 'pages/Blog';
 import { Contacts } from 'pages/Contacts';
+import { CourseDetails } from 'pages/CourseDetails';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path='about-us' element={<AboutUs />} />
           <Route path='courses' element={<Courses />} />
+          <Route path='course-details' element={<CourseDetails />} />
           <Route path='events' element={<Events />} />
           <Route path='blog' element={<Blog />} />
           <Route path='contacts' element={<Contacts />} />

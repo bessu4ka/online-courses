@@ -1,7 +1,7 @@
 import styled from './Events.module.scss';
 
 const Events = () => {
-  return <div className={styled.container}>Events</div>;
+  return <main className={styled.container}>Events</main>;
 };
 
 export { Events };
