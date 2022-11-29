@@ -1,0 +1,90 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 200px;
+
+	.listWrapper {
+		h3 {
+			@include title-h3;
+		}
+
+		h2 {
+			@include title-h2;
+			margin: 8px 0 60px 0;
+		}
+
+		>ul {
+			max-width: 600px;
+
+			>li {
+
+				.titleWrapper {
+					cursor: pointer;
+					display: flex;
+					gap: 8px;
+					align-items: center;
+					margin-bottom: 10px;
+
+					>svg {
+						width: 20px;
+						height: 20px;
+						display: block;
+						fill: $primary;
+						margin-right: 12px;
+					}
+
+					>span {
+						font-size: 20px;
+						line-height: 150%;
+						color: $primary;
+					}
+
+					>p {
+						font-weight: 700;
+						font-size: 20px;
+						line-height: 150%;
+						color: $gray900;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+
+				.text {
+					margin-left: auto;
+					max-width: 550px;
+					font-size: 16px;
+					line-height: 160%;
+					color: $gray800;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					animation: 1s show ease;
+				}
+
+				.noText {
+					display: none;
+				}
+			}
+		}
+	}
+
+	>img {
+		width: 495px;
+		height: 554px;
+		display: flex;
+	}
+}
+
+@keyframes show {
+	from {
+		height: 0;
+	}
+
+	to {
+		height: 104px;
+	}
+}
