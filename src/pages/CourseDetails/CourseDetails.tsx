@@ -5,6 +5,7 @@ import { ForWhom } from 'components/CourseDetailsPage/ForWhom';
 import { PageTitle } from 'components/CourseDetailsPage/PageTitle';
 import { Program } from 'components/CourseDetailsPage/Program';
 import { Register } from 'components/CourseDetailsPage/Register';
+import { RelatedCoursesSwiper } from 'components/CourseDetailsPage/RelatedCoursesSwiper';
 import { Steps } from 'components/CourseDetailsPage/Steps';
 import { Testimonials } from 'components/HomePage/Testimonials';
 
@@ -22,6 +23,7 @@ const CourseDetails = () => {
       <Program />
       <Testimonials />
       <Register />
+      <RelatedCoursesSwiper />
     </main>
   );
 };
