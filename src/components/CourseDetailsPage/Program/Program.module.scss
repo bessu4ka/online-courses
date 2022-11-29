@@ -62,6 +62,7 @@
 					color: $gray800;
 					overflow: hidden;
 					text-overflow: ellipsis;
+					-webkit-animation: 1s show ease;
 					animation: 1s show ease;
 				}
 
@@ -76,6 +77,16 @@
 		width: 495px;
 		height: 554px;
 		display: flex;
+	}
+}
+
+@-webkit-keyframes show {
+	from {
+		height: 0;
+	}
+
+	to {
+		height: 104px;
 	}
 }
 
