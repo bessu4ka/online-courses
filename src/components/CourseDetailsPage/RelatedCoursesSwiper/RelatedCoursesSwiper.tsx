@@ -8,6 +8,7 @@ import { courses_1, courses_2, courses_3, courses_4 } from 'images/homePage';
 
 import 'swiper/css';
 import styled from './RelatedCoursesSwiper.module.scss';
+import { LargeButton } from 'components/Buttons/LargeButton';
 
 const data = [
   {
@@ -46,7 +47,9 @@ const RelatedCoursesSwiper = () => {
 
   return (
     <section className={styled.container}>
-      <>
+      <h3>Check other courses</h3>
+      <h2>You may also like</h2>
+      <div className={styled.swiper}>
         {/* swiper navigation */}
         <div className={styled.navigation}>
           <div ref={navigationPrevRef}>
@@ -96,7 +99,14 @@ const RelatedCoursesSwiper = () => {
             })}
           </Swiper>
         </div>
-      </>
+      </div>
+
+      <div className={styled.infoBtn}>
+        <p>Do you want more courses?</p>
+        <div className={styled.btnWrapper}>
+          <LargeButton title='View all courses' />
+        </div>
+      </div>
     </section>
   );
 };
