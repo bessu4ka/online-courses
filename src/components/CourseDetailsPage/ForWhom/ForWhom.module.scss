@@ -1,0 +1,53 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	justify-content: space-between;
+	margin: 180px 0;
+
+	>div {
+		max-width: 495px;
+
+		h3 {
+			@include title-h3;
+		}
+
+		h2 {
+			margin-top: 8px;
+			@include title-h2;
+		}
+	}
+
+	ul {
+		max-width: 600px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		>li {
+			display: flex;
+			gap: 16px;
+
+			>div {
+				margin-top: 5px;
+				width: 20px;
+				height: 20px;
+
+				>svg {
+					display: block;
+					width: 20px;
+					height: 20px;
+					fill: $primary;
+				}
+			}
+
+			>span {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 150%;
+				color: $gray800;
+			}
+		}
+	}
+}
