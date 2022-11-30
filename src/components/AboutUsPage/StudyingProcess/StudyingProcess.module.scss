@@ -1,0 +1,70 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	margin-top: 180px;
+	color: $gray700;
+	line-height: 150%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	h3 {
+		@include title-h3;
+	}
+
+	h2 {
+		@include title-h2;
+		margin: 8px 0 60px 0;
+	}
+
+	.steps {
+		display: flex;
+		flex-direction: column;
+
+		>li {
+			display: flex;
+			flex-direction: column;
+			max-width: 446px;
+
+			.stepWrapper {
+				display: flex;
+				align-items: center;
+				gap: 40px;
+
+				.circle {
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: $primary;
+				}
+
+				.step {
+					font-weight: 900;
+					font-size: 12px;
+				}
+			}
+
+			.info {
+				padding-left: 40px;
+				border-left: 1px solid $gray400;
+				margin-left: 3px;
+
+				.title {
+					font-weight: 700;
+					font-size: 20px;
+					color: $gray900;
+					margin: 2px 0 10px 0;
+					margin: 2px 0 8px 3px;
+				}
+
+				.text {
+					font-size: 16px;
+					line-height: 160%;
+					padding-bottom: 32px;
+					margin-left: 3px;
+				}
+			}
+		}
+	}
+}
