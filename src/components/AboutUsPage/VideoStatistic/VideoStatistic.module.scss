@@ -1,0 +1,92 @@
+@import 'scss';
+
+.container {
+	width: 100%;
+	padding: 180px 0;
+	display: flex;
+	justify-content: center;
+	color: $gray900;
+
+	// bg-images -----------
+	background-image: url(../../../assets/backgroundSVGs/orange-dots-statistic.svg),
+		url(../../../assets/backgroundSVGs/orange-half-circles.svg);
+	background-repeat: no-repeat;
+	background-position: bottom 137px left 255px,
+		right 140px bottom 45px;
+	// ----------------------
+
+	.content {
+		width: 1230px;
+
+		.btnWrapper {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			.btn {
+				background-color: $primary;
+				width: 52px;
+				height: 52px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				>svg {
+					fill: $white;
+					width: 16px;
+					height: 16px;
+					display: block;
+					margin-left: 3px;
+				}
+			}
+
+			>span {
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 150%;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+		}
+
+		.info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.image {
+				width: 810px;
+				height: 500px;
+				box-shadow: $small;
+			}
+
+			>ul {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				>li {
+					display: flex;
+					align-items: center;
+					gap: 16px;
+
+					.amount {
+						font-weight: 900;
+						font-size: 48px;
+						line-height: 130%;
+						color: $primary;
+					}
+
+					.description {
+						font-weight: 700;
+						font-size: 18px;
+						line-height: 150%;
+					}
+				}
+			}
+		}
+	}
+}
