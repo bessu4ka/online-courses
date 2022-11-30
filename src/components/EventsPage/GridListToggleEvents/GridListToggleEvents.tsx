@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
+import { ListElement } from 'components/EventsPage/ListElement';
+import { GridElement } from 'components/EventsPage/GridElement';
 import sprite from 'images/sprite.svg';
+import data from './data.json';
 
 import styled from './GridListToggleEvents.module.scss';
 
@@ -13,7 +16,7 @@ const GridListToggleEvents = () => {
   }
 
   return (
-    <div className={styled.container}>
+    <section className={styled.container}>
       <h3>Our events</h3>
 
       <h2>Lectures, workshops & master-classes</h2>
@@ -65,7 +68,33 @@ const GridListToggleEvents = () => {
           </svg>
         </div>
       </div>
-    </div>
+
+      <ul className={isList ? styled.list : styled.grid}>
+        {data.map(({ day, month, time, title, format }, index) => {
+          return (
+            <li key={index}>
+              {isList ? (
+                <ListElement
+                  day={day}
+                  month={month}
+                  format={format}
+                  time={time}
+                  title={title}
+                />
+              ) : (
+                <GridElement
+                  day={day}
+                  month={month}
+                  format={format}
+                  time={time}
+                  title={title}
+                />
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 };
 

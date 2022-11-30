@@ -1,0 +1,77 @@
+@import 'scss';
+
+.container {
+	width: 100%;
+	height: 126px;
+	background-color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 40px;
+	padding: 0 40px;
+
+	&:hover {
+		box-shadow: $small;
+	}
+
+	.date {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		width: 177px;
+
+		.day {
+			font-weight: 900;
+			font-size: 48px;
+			line-height: 130%;
+			color: $primary;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			.month {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 150%;
+				color: $gray900;
+			}
+
+			.time {
+				font-size: 16px;
+				line-height: 160%;
+				color: $gray700;
+			}
+		}
+	}
+
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		.title {
+			max-width: 757px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 150%;
+			color: $gray900;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.format {
+			font-size: 16px;
+			line-height: 160%;
+			color: $gray700;
+		}
+	}
+
+	.btnWrapper {
+		width: 136px;
+		margin-left: auto;
+	}
+}
