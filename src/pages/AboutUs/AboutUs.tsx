@@ -1,3 +1,4 @@
+import { Directions } from 'components/AboutUsPage/Directions';
 import { Info } from 'components/AboutUsPage/Info';
 import { Values } from 'components/AboutUsPage/Values';
 import { VideoStatistic } from 'components/AboutUsPage/VideoStatistic';
@@ -10,6 +11,7 @@ const AboutUs = () => {
       <Info />
       <VideoStatistic />
       <Values />
+      <Directions />
     </main>
   );
 };
