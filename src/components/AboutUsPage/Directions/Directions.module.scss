@@ -1,0 +1,148 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	margin: 180px 0 0 0;
+
+	h3 {
+		@include title-h3;
+		text-align: center
+	}
+
+	h2 {
+		@include title-h2;
+		text-align: center;
+		margin: 8px 0 60px 0;
+	}
+
+	>ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+
+		>li {
+			width: 390px;
+			height: 420px !important;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			>img {
+				width: 390px;
+				height: 200px;
+				display: block;
+				border-radius: 4px 4px 0 0;
+			}
+
+			.info {
+				padding: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				border: 1px solid $gray300;
+				border-top: none;
+				border-radius: 0 0 4px 4px;
+				height: 220px;
+
+				// direction
+				.directionWrapper {
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 160%;
+					color: $white;
+					border-radius: 4px;
+					height: 28px;
+
+					.marketing {
+						background-color: $success;
+						padding: 0 8px;
+						display: inline-block;
+						border-radius: 4px;
+					}
+
+					.management {
+						background-color: $info;
+						@extend .marketing;
+					}
+
+					.recruting {
+						background-color: $warning;
+						@extend .marketing;
+					}
+
+					.design {
+						background-color: $pink;
+						@extend .marketing;
+					}
+
+					.development {
+						background-color: $lilac;
+						@extend .marketing;
+					}
+				}
+
+				// -----------
+
+				.text {
+					font-size: 16px;
+					line-height: 160%;
+					color: $gray700;
+					max-height: 78px;
+					overflow: hidden;
+					margin-top: 20px;
+				}
+
+				.btnWrapper {
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					width: 135px;
+
+
+					&:hover {
+						>span {
+							color: $primary;
+						}
+					}
+
+					>span {
+						font-weight: 700;
+						font-size: 16px;
+						line-height: 160%;
+						color: $gray900;
+					}
+
+					>svg {
+						width: 24px;
+						height: 24px;
+						display: block;
+						fill: $primary;
+					}
+				}
+			}
+		}
+
+		.emptyBlock {
+			width: 390px;
+			height: 420px;
+			background-color: $gray300;
+			overflow: hidden;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			>span {
+				max-width: 242px;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 150%;
+				color: $gray800;
+				text-align: center;
+			}
+		}
+	}
+}

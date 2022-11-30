@@ -27,7 +27,7 @@ const data = [
 
 const Values = () => {
   return (
-    <div className={styled.container}>
+    <section className={styled.container}>
       <h3>We always stand for</h3>
       <h2>Our core values</h2>
 
@@ -44,7 +44,7 @@ const Values = () => {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 
