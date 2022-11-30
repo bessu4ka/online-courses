@@ -1,5 +1,6 @@
 import { Directions } from 'components/AboutUsPage/Directions';
 import { Info } from 'components/AboutUsPage/Info';
+import { StudyingProcess } from 'components/AboutUsPage/StudyingProcess';
 import { Values } from 'components/AboutUsPage/Values';
 import { VideoStatistic } from 'components/AboutUsPage/VideoStatistic';
 
@@ -12,6 +13,7 @@ const AboutUs = () => {
       <VideoStatistic />
       <Values />
       <Directions />
+      <StudyingProcess />
     </main>
   );
 };
