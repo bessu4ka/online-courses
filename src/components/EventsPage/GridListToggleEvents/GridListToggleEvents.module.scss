@@ -2,7 +2,7 @@
 
 .container {
 	width: 1230px;
-	margin: 152px 0 8px 0;
+	margin: 152px 0 180px 0;
 
 	h3 {
 		@include title-h3;
@@ -12,6 +12,7 @@
 	h2 {
 		@include title-h2;
 		text-align: center;
+		margin-top: 8px;
 	}
 
 	.sortMenu {
