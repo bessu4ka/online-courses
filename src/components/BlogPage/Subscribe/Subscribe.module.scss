@@ -1,0 +1,61 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	>img {
+		width: 507px;
+		height: 454px;
+		display: block;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+
+		.title {
+			font-weight: 900;
+			font-size: 32px;
+			line-height: 130%;
+			color: $gray900;
+			width: 600px;
+		}
+
+		.formWrapper {
+			margin: 48px 0 24px 0;
+
+			.inputWrapper {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+
+				>input {
+					width: 422px;
+					height: 52px;
+					border-radius: 4px;
+					padding: 0 16px;
+					border: 1px solid $gray400;
+				}
+
+				.btnWrapper {
+					width: 154px;
+				}
+			}
+		}
+
+		.checkboxWrapper {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			>span {
+				font-size: 16px;
+				line-height: 160%;
+				color: $gray800;
+			}
+		}
+	}
+}
