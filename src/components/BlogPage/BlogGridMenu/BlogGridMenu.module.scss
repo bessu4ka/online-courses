@@ -1,0 +1,104 @@
+@import 'scss';
+
+.container {
+	width: 1230px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 180px 0;
+
+	h3 {
+		@include title-h3;
+	}
+
+	h2 {
+		@include title-h2;
+		margin: 8px 90px;
+	}
+
+	.menu {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		>nav {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			.tab {
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 160%;
+				color: $gray600;
+				border: 1px solid transparent;
+				padding: 0 20px;
+				height: 46px;
+				background-color: $gray200;
+				border-radius: 4px;
+
+				&:hover {
+					border: 1px solid $info
+				}
+
+				>svg {
+					width: 16px;
+					height: 16px;
+					fill: $gray600;
+					display: block;
+				}
+			}
+
+			.activeTab {
+				@extend .tab;
+				color: $primary;
+				border: 1px solid $primary;
+
+				>svg {
+					fill: $primary
+				}
+			}
+		}
+	}
+
+	.selectWrapper {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
+		.category {
+			display: flex;
+			gap: 12px;
+			align-items: center;
+
+			>span {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 160%;
+				color: $gray800;
+			}
+
+			>select {
+				width: 160px;
+				height: 44px;
+				border: 1px solid $gray400;
+				border-radius: 4px;
+				padding: 0 16px;
+
+			}
+		}
+
+		>input {
+			background-image: url(../../../assets/backgroundSVGs/search.svg);
+			background-repeat: no-repeat;
+			background-position: right 13px top 13px;
+			width: 285px;
+			padding: 0 32px 0 16px;
+		}
+	}
+}
