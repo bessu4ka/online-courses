@@ -13,7 +13,7 @@
 
 	h2 {
 		@include title-h2;
-		margin: 8px 90px;
+		margin: 8px 0 90px 0;
 	}
 
 	.menu {
@@ -21,6 +21,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 58px;
 
 		>nav {
 			display: flex;
