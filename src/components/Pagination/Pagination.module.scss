@@ -1,0 +1,37 @@
+@import 'scss';
+
+.container {
+	display: flex;
+	align-items: center;
+
+	>svg {
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		display: block;
+		color: $gray800;
+		margin: 0 20px;
+
+		&:hover {
+			fill: $primary;
+		}
+	}
+
+	>ul {
+		display: flex;
+		gap: 20px;
+
+		.page {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 160%;
+			color: $gray800;
+			cursor: pointer
+		}
+
+		.activePage {
+			@extend .page;
+			color: $primary;
+		}
+	}
+}
