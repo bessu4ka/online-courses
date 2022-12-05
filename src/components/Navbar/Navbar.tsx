@@ -1,5 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 import { LargeButton } from 'components/Buttons/LargeButton';
 import { ModalPortal } from 'components/ModalPortal';
@@ -10,30 +12,58 @@ import sprite from 'images/sprite.svg';
 import styled from './Navbar.module.scss';
 
 const Navbar = () => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isOpenModalRegistration, setIsOpenModalRegistration] = useState(false);
+  const [isOpenModalNavigateMenu, setIsOpenModalNavigateMenu] = useState(false);
+
   const navigate = useNavigate();
 
-
-  function openModal() {
-    setIsOpenModal(true);
+  // login menu
+  function openModalLogin() {
+    setIsOpenModalRegistration(true);
   }
 
-  function closeModal() {
-    setIsOpenModal(false);
+  function closeModalLogin() {
+    setIsOpenModalRegistration(false);
   }
+  // - - - - - - - - - - - - - -
+
+  // navigate menu
+  function openNavigateMenu() {
+    setIsOpenModalNavigateMenu(true);
+  }
+
+  function closeNavigateMenu() {
+    setIsOpenModalNavigateMenu(false);
+  }
+  // - - - - - - - - - - - - - -
 
   return (
     <>
       <ModalPortal
-        children={<LoginModal closeModal={closeModal} />}
-        isOpen={isOpenModal}
+        children={<LoginModal closeModal={closeModalLogin} />}
+        isOpen={isOpenModalRegistration}
       />
 
-      <nav className={styled.container}>
-        <svg className={styled.logo} onClick={() => navigate('/')}>
-          <use href={sprite + '#logo'}></use>
-        </svg>
+      <div className={styled.mobileMenuButtonWrapper}>
+        {isOpenModalNavigateMenu && (
+          <svg className={styled.burger} onClick={closeNavigateMenu}>
+            <use href={sprite + '#cross-burger'} />
+          </svg>
+        )}
 
+        {!isOpenModalNavigateMenu && (
+          <svg className={styled.burger} onClick={openNavigateMenu}>
+            <use href={sprite + '#burger'} />
+          </svg>
+        )}
+      </div>
+
+      <nav className={styled.container}>
+        <Tippy content='Home page'>
+          <svg className={styled.logo} onClick={() => navigate('/')}>
+            <use href={sprite + '#logo'} />
+          </svg>
+        </Tippy>
         <article className={styled.links}>
           {routes.map((route, index) => {
             return (
@@ -51,12 +81,12 @@ const Navbar = () => {
           <div className={styled.buttonWrapper}>
             <LargeButton title='Get consultation' />
           </div>
-          <div className={styled.login} onClick={() => openModal()}>
+          <button className={styled.login} onClick={openModalLogin}>
             <svg className={styled.person}>
-              <use href={sprite + '#person'}></use>
+              <use href={sprite + '#person'} />
             </svg>
-            <div className={styled.text}>Log in / Register</div>
-          </div>
+            <span className={styled.text}>Log in / Register</span>
+          </button>
         </article>
       </nav>
     </>

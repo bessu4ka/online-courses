@@ -12,20 +12,18 @@ import { CourseDetails } from 'pages/CourseDetails';
 
 const App = () => {
   return (
-    <>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path='about-us' element={<AboutUs />} />
-          <Route path='courses' element={<Courses />} />
-          <Route path='course-details' element={<CourseDetails />} />
-          <Route path='events' element={<Events />} />
-          <Route path='blog' element={<Blog />} />
-          <Route path='contacts' element={<Contacts />} />
-        </Route>
-        <Route path='*' element={<EmptyPage />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path='about-us' element={<AboutUs />} />
+        <Route path='courses' element={<Courses />} />
+        <Route path='course-details' element={<CourseDetails />} />
+        <Route path='events' element={<Events />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path='contacts' element={<Contacts />} />
+      </Route>
+      <Route path='*' element={<EmptyPage />} />
+    </Routes>
   );
 };
 
