@@ -7,7 +7,7 @@ const Contacts = () => {
   return (
     <div className={styled.container}>
       <ContactMap />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </div>
   );
 };
