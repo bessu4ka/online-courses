@@ -7,12 +7,34 @@
 	display: flex;
 	justify-content: center;
 
+	@media (max-width:$regular-size) {
+		height: 100%;
+		padding: 20px;
+	}
+
 	.contentWrapper {
 		display: flex;
 		width: 1230px;
 		justify-content: space-between;
 		color: $white;
 		margin-top: 80px;
+
+		@media (max-width:$large-size) {
+			width: 980px;
+		}
+
+		@media (max-width:$regular-size) {
+			flex-wrap: wrap;
+		}
+
+		@media (max-width:$small-size) {
+			gap: 20px;
+			padding: 0px 50px;
+		}
+
+		@media (max-width:$tiny-size) {
+			padding: 10px;
+		}
 
 		.logoInfoWrapper {
 			display: flex;
@@ -52,6 +74,7 @@
 				}
 			}
 		}
+
 
 		.list {
 			display: flex;
@@ -121,6 +144,12 @@
 			}
 		}
 
+		.hidden {
+			@media (max-width:$small-size) {
+				display: none;
+			}
+		}
+
 		.item {
 			font-size: 16px;
 			line-height: 160%;
@@ -139,5 +168,4 @@
 			}
 		}
 	}
-
 }

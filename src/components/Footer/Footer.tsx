@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </article>
 
-        <article className={styled.list}>
+        <article className={`${styled.list} ${styled.hidden}`}>
           <h4>SITE MAP</h4>
           <p className={styled.item}>About Us</p>
           <p className={styled.item}>Courses</p>
@@ -47,7 +47,7 @@ const Footer = () => {
           <p className={styled.item}>Contacts</p>
         </article>
 
-        <article className={styled.list}>
+        <article className={`${styled.list} ${styled.hidden}`}>
           <h4>COURSES</h4>
           <p className={styled.item}>Marketing</p>
           <p className={styled.item}>Management</p>

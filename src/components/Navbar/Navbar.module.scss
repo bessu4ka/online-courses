@@ -57,4 +57,20 @@
 			}
 		}
 	}
+
+	@media (max-width:$large-size) {
+		width: 900px;
+
+		.links {
+			gap: 20px;
+		}
+	}
+
+	@media (max-width:$regular-size) {
+		width: 760px;
+
+		.links {
+			display: none;
+		}
+	}
 }

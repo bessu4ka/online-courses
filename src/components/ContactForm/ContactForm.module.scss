@@ -100,3 +100,14 @@
 		}
 	}
 }
+
+@media (max-width:$large-size) {
+	.container {
+		width: 980px;
+		justify-content: center;
+
+		.img {
+			display: none;
+		}
+	}
+}
