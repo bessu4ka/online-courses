@@ -6,24 +6,45 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 180px;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 60px;
+	}
 
 	.img {
 		width: 435px;
 		height: 481px;
 		display: block;
+
+		@media (max-width:$large-size) {
+			display: none;
+		}
 	}
 
 	.formWrapper {
 		h3 {
 			@include title-h3;
+
+			@media (max-width:$small-size) {
+				text-align: center;
+			}
 		}
 
 		h2 {
 			@include title-h2;
 			margin: 8px 0 40px 0;
+
+			@media (max-width:$small-size) {
+				text-align: center;
+				margin: 0px 0px 20px 0px;
+			}
 		}
 
 		.form {
+
 			.inputsWrapper {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
@@ -31,12 +52,22 @@
 				grid-column-gap: 25px;
 				grid-row-gap: 24px;
 				margin-bottom: 24px;
+
+				@media (max-width:$small-size) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
 			}
 
 			.fieldWrapper {
 				display: flex;
 				flex-direction: column;
 				gap: 8px;
+
+				@media (max-width:$small-size) {
+					gap: 0;
+				}
 
 				>label {
 					font-size: 16px;
@@ -51,6 +82,10 @@
 					padding: 0 16px;
 					border-radius: 4px;
 					color: $gray800;
+
+					@media (max-width:$small-size) {
+						width: 380px;
+					}
 				}
 
 				.errorInput {
@@ -63,7 +98,11 @@
 					width: 705px;
 					height: 128px;
 					border-radius: 4px;
-					resize: none
+					resize: none;
+
+					@media (max-width:$small-size) {
+						width: 380px;
+					}
 				}
 
 				.errorTextarea {
@@ -77,12 +116,26 @@
 			justify-content: space-between;
 			margin-top: 48px;
 
+			@media (max-width:$small-size) {
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+			}
+
 			.checkboxWrapper {
 				display: flex;
 				gap: 12px;
 
+				@media (max-width:$small-size) {
+					align-items: center;
+				}
+
 				.checkbox {
 					margin-top: 5px;
+
+					@media (max-width:$small-size) {
+						margin: 0px 0px 0px 0px;
+					}
 				}
 
 				>p {
@@ -91,23 +144,25 @@
 					font-size: 16px;
 					line-height: 160%;
 					color: $gray800;
+
+					@media (max-width:$small-size) {
+						height: min-content;
+					}
+
+					@media (max-width:$small-size) {
+						width: 350px;
+						font-size: 12.5px;
+					}
 				}
 			}
 
 			.btnWrapper {
 				width: 340px;
+
+				@media (max-width:$small-size) {
+					width: 380px;
+				}
 			}
-		}
-	}
-}
-
-@media (max-width:$large-size) {
-	.container {
-		width: 980px;
-		justify-content: center;
-
-		.img {
-			display: none;
 		}
 	}
 }

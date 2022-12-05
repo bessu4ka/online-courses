@@ -38,7 +38,11 @@
 		width: 130px;
 		height: 22px;
 		display: block;
-		cursor: pointer
+		cursor: pointer;
+
+		@media (max-width:$regular-size) {
+			margin-left: 20px;
+		}
 	}
 
 	.links {

@@ -1,5 +1,5 @@
-import { FC, useCallback, useRef } from 'react';
-import { GoogleMap } from '@react-google-maps/api';
+import { FC, useCallback, useRef, useEffect, useState } from 'react';
+import { GoogleMap, GoogleMapProps } from '@react-google-maps/api';
 
 import styled from './Map.module.scss';
 
@@ -11,11 +11,6 @@ type coordinatesType = {
 interface IProps {
   center: coordinatesType;
 }
-
-const containerStyle = {
-  width: '705px',
-  height: '412px',
-};
 
 const defaultOptions = {
   panControl: true,
@@ -31,10 +26,30 @@ const defaultOptions = {
   fullscreenControl: false,
 };
 
-const Map: FC<IProps> = ({ center }) => {
-  const mapRef = useRef(undefined);
+const initialContainerStyle = { width: '705px', height: '412px' };
 
-  const onLoad = useCallback((map: any) => {
+const Map: FC<IProps> = ({ center }) => {
+  const [containerStyle, setContainerStyle] = useState(initialContainerStyle);
+  const mapRef = useRef<google.maps.Map | undefined>(undefined);
+
+  useEffect(() => {
+    window.addEventListener('resize', currentWidth);
+    currentWidth();
+    return () => window.removeEventListener('resize', currentWidth);
+  }, []);
+
+  function currentWidth() {
+    if (window.screen.width <= 768) {
+      setContainerStyle({
+        width: '390px',
+        height: '400px',
+      });
+    } else {
+      setContainerStyle(initialContainerStyle);
+    }
+  }
+
+  const onLoad = useCallback((map: google.maps.Map) => {
     mapRef.current = map;
   }, []);
 

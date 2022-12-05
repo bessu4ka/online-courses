@@ -1,4 +1,11 @@
+@import 'scss';
+
 .container {
 	width: 705px;
 	height: 412px;
+	overflow: hidden;
+
+	@media (max-width:$small-size) {
+		width: 390px;
+	}
 }
