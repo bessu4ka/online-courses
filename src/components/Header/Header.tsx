@@ -1,5 +1,6 @@
-import { Navbar } from 'components/Navbar';
 import { useEffect, useState } from 'react';
+
+import { Navbar } from 'components/Navbar';
 
 import styled from './Header.module.scss';
 
@@ -19,6 +20,7 @@ const Header = () => {
       setScroll(false);
     }
   }
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   return (
     <header className={scroll ? styled.scrolled : styled.container}>

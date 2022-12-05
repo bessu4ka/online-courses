@@ -4,12 +4,19 @@
 	width: 100%;
 	border-radius: 4px;
 	font-weight: 700;
+	transition: .3s ease;
 }
 
 @mixin basic-button {
 	@include button;
-	background: $btn-gradient;
+	background: $primary;
 	color: $white;
+
+	&:hover {
+		background: $warning;
+		color: $lilac;
+		transition: .3s ease;
+	}
 }
 
 @mixin outline-button {
@@ -17,4 +24,10 @@
 	background: transparent;
 	color: $primary;
 	border: 1px solid $primary;
+
+	&:hover {
+		border-color: $lilac ;
+		color: $lilac;
+		transition: .3s ease;
+	}
 }

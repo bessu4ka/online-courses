@@ -1,5 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 import { LargeButton } from 'components/Buttons/LargeButton';
 import { ModalPortal } from 'components/ModalPortal';
@@ -12,7 +14,6 @@ import styled from './Navbar.module.scss';
 const Navbar = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const navigate = useNavigate();
-
 
   function openModal() {
     setIsOpenModal(true);
@@ -30,10 +31,11 @@ const Navbar = () => {
       />
 
       <nav className={styled.container}>
-        <svg className={styled.logo} onClick={() => navigate('/')}>
-          <use href={sprite + '#logo'}></use>
-        </svg>
-
+        <Tippy content='Home page'>
+          <svg className={styled.logo} onClick={() => navigate('/')}>
+            <use href={sprite + '#logo'}></use>
+          </svg>
+        </Tippy>
         <article className={styled.links}>
           {routes.map((route, index) => {
             return (
