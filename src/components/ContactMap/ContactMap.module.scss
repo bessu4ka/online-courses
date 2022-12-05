@@ -7,6 +7,18 @@
 	justify-content: space-between;
 	align-items: flex-end;
 
+	@media (max-width:$large-size) {
+		width: 980px;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 60px;
+	}
+
+	@media (max-width:$regular-size) {
+		width: 750px;
+	}
+
 	.contacts {
 		h3 {
 			@include title-h3;
@@ -14,7 +26,11 @@
 
 		h2 {
 			@include title-h2;
-			margin: 8px 0 40px 0;
+			margin: 8px 0px 40px 0px;
+			@media (max-width:$large-size) {
+				margin: -5px 0px 20px 0px;
+				
+			}
 		}
 
 		.contactsData {
@@ -23,6 +39,10 @@
 			gap: 24px;
 			margin-bottom: 48px;
 			fill: $primary;
+			@media (max-width:$large-size) {
+				gap: 10px;
+				margin-bottom: 20px;
+			}
 
 			.contactWrapper {
 				display: flex;
@@ -38,11 +58,20 @@
 					display: flex;
 					flex-direction: column;
 
+					@media (max-width:$large-size) {
+						flex-direction: row;
+						align-items: center;
+					}
+
 					.fieldName {
 						font-weight: 700;
 						font-size: 14px;
 						line-height: 150%;
 						color: $gray700;
+
+						@media (max-width:$large-size) {
+							width: 70px;
+						}
 					}
 
 					.field {
@@ -93,46 +122,5 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-}
-
-// large-size
-@media (max-width:$large-size) {
-	.container {
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-		margin-bottom: 60px;
-
-		.contacts {
-
-			>h3 {
-				text-align: center;
-			}
-
-			>h2 {
-				text-align: center;
-			}
-
-			.contactsData {
-				gap: 10px;
-
-				.contactWrapper {
-					>article {
-						flex-direction: row;
-						align-items: center;
-
-						.fieldName {
-							width: 70px;
-						}
-					}
-				}
-			}
-
-		}
-
-		.socialsData {
-			margin-top: -20px;
-		}
 	}
 }
