@@ -6,9 +6,21 @@ import sprite from 'images/sprite.svg';
 
 import styled from './ContactMap.module.scss';
 
+// key api for google map
 const APP_API = process.env.REACT_APP_API_KEY;
 
-// Kyiv
+const contactList = [
+  { icon: 'chat', title: 'Talk to us:', detail: 'hello@createx.com' },
+  { icon: 'phone', title: 'Call us:', detail: '(405) 555-0128' },
+  {
+    icon: 'outline',
+    title: 'Address:',
+    detail: '2464 Royal Ln. Mesa, New Jersey 45463, USA',
+  },
+];
+const iconList = ['facebook', 'twitter', 'youtube', 'telegram', 'instagram', 'linked-In'];
+
+// Kyiv coordinates
 const center = {
   lat: 50.45466,
   lng: 30.5238,
@@ -26,68 +38,36 @@ const ContactMap = () => {
         <h2>Get in touch</h2>
 
         {/* contacts */}
-        <div className={styled.contactsData}>
-          <div className={styled.contactWrapper}>
-            <svg className={styled.contactsIcon}>
-              <use href={sprite + '#chat'} />
-            </svg>
-            <article>
-              <p className={styled.fieldName}>Talk to us:</p>
-              <p className={styled.field}>hello@createx.com</p>
-            </article>
-          </div>
+        <ul className={styled.contactsData}>
+          {contactList.map(({ icon, title, detail }, index) => {
+            return (
+              <li key={index} className={styled.contactWrapper}>
+                <svg className={styled.contactsIcon}>
+                  <use href={sprite + `#${icon}`} />
+                </svg>
+                <article>
+                  <span className={styled.fieldName}>{title}</span>
+                  <span className={styled.field}>{detail}</span>
+                </article>
+              </li>
+            );
+          })}
+        </ul>
 
-          <div className={styled.contactWrapper}>
-            <svg className={styled.contactsIcon}>
-              <use href={sprite + '#phone'} />
-            </svg>
-            <article>
-              <p className={styled.fieldName}>Call us:</p>
-              <p className={styled.field}>(405) 555-0128</p>
-            </article>
-          </div>
-
-          <div className={styled.contactWrapper}>
-            <svg className={styled.contactsIcon}>
-              <use href={sprite + '#outline'} />
-            </svg>
-            <article>
-              <p className={styled.fieldName}>Address:</p>
-              <p className={styled.field}>2464 Royal Ln. Mesa, New Jersey 45463, USA</p>
-            </article>
-          </div>
-        </div>
-
-        {/* follow us */}
         <div className={styled.socialsData}>
           <p className={styled.followUs}>Follow us:</p>
-
           {/* socials-icons */}
-          <div className={styled.socialsIconWrapper}>
-            <svg className={styled.icon}>
-              <use href={sprite + '#facebook'} />
-            </svg>
-
-            <svg className={styled.icon}>
-              <use href={sprite + '#twitter'} />
-            </svg>
-
-            <svg className={styled.icon}>
-              <use href={sprite + '#youtube'} />
-            </svg>
-
-            <svg className={styled.icon}>
-              <use href={sprite + '#telegram'} />
-            </svg>
-
-            <svg className={styled.icon}>
-              <use href={sprite + '#instagram'} />
-            </svg>
-
-            <svg className={styled.icon}>
-              <use href={sprite + '#linked-In'} />
-            </svg>
-          </div>
+          <ul className={styled.socialsIconWrapper}>
+            {iconList.map((icon, index) => {
+              return (
+                <li key={index}>
+                  <svg className={styled.icon}>
+                    <use href={sprite + `#${icon}`} />
+                  </svg>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </aside>
 
