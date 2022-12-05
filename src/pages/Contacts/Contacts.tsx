@@ -5,10 +5,10 @@ import styled from './Contacts.module.scss';
 
 const Contacts = () => {
   return (
-    <main className={styled.container}>
+    <div className={styled.container}>
       <ContactMap />
-      <ContactForm />
-    </main>
+      {/* <ContactForm /> */}
+    </div>
   );
 };
 

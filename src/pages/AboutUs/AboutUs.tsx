@@ -12,7 +12,7 @@ import styled from './AboutUs.module.scss';
 
 const AboutUs = () => {
   return (
-    <main className={styled.container}>
+    <div className={styled.container}>
       <Info />
       <VideoStatistic />
       <Values />
@@ -22,7 +22,7 @@ const AboutUs = () => {
       <Testimonials />
       <Blog />
       <Subscribe />
-    </main>
+    </div>
   );
 };
 

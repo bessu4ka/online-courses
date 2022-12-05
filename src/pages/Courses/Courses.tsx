@@ -7,12 +7,12 @@ import styled from './Courses.module.scss';
 
 const Courses = () => {
   return (
-    <main className={styled.container}>
+    <div className={styled.container}>
       <CoursesBlock />
       <Testimonials />
       <Certificate />
       <Subscribe />
-    </main>
+    </div>
   );
 };
 

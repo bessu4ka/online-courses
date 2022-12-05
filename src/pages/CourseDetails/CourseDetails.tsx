@@ -13,7 +13,7 @@ import styled from './CourseDetails.module.scss';
 
 const CourseDetails = () => {
   return (
-    <main className={styled.container}>
+    <div className={styled.container}>
       <PageTitle />
       <About />
       <Curator />
@@ -24,7 +24,7 @@ const CourseDetails = () => {
       <Testimonials />
       <Register />
       <RelatedCoursesSwiper />
-    </main>
+    </div>
   );
 };
 

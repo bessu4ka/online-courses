@@ -5,10 +5,10 @@ import styled from './Events.module.scss';
 
 const Events = () => {
   return (
-    <main className={styled.container}>
+    <div className={styled.container}>
       <GridListToggleEvents />
       <Subscribe />
-    </main>
+    </div>
   );
 };
 
