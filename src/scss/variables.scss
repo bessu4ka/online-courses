@@ -34,7 +34,7 @@ $slider-gradient: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%,
 		rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
 //- - - - - - - - - - - - - - -
 
-//shadows - - - - - - - - - - -
+// shadows- - - - - - - - - - -
 $small: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
 	0px 30px 24px -10px rgba(154, 156, 165, 0.05),
 	0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
@@ -45,3 +45,21 @@ $large: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
 	0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 12px 10px -6px rgba(30, 33, 44, 0.08),
 	0px 4px 4px -4px rgba(30, 33, 44, 0.05);
 //- - - - - - - - - - - - - - -
+
+// media- - - - - - - - - - - -
+$tiny-size: 390px;
+$small-size: 768px;
+$regular-size: 992px;
+$large-size: 1240px;
+
+//- - - - - - - - - - - - - - -
+
+//  quick example ===============
+
+@media (max-width:$tiny-size) {}
+
+@media (max-width:$small-size) {}
+
+@media (max-width:$regular-size) {}
+
+@media (max-width:$large-size) {}

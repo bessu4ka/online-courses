@@ -13,6 +13,7 @@ const Navbar = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const navigate = useNavigate();
 
+
   function openModal() {
     setIsOpenModal(true);
   }

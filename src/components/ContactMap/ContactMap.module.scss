@@ -95,3 +95,44 @@
 		align-items: center;
 	}
 }
+
+// large-size
+@media (max-width:$large-size) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 60px;
+
+		.contacts {
+
+			>h3 {
+				text-align: center;
+			}
+
+			>h2 {
+				text-align: center;
+			}
+
+			.contactsData {
+				gap: 10px;
+
+				.contactWrapper {
+					>article {
+						flex-direction: row;
+						align-items: center;
+
+						.fieldName {
+							width: 70px;
+						}
+					}
+				}
+			}
+
+		}
+
+		.socialsData {
+			margin-top: -20px;
+		}
+	}
+}
