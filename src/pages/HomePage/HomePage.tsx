@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div className={styled.container}>
       <Header />
-      <About />
+      {/* <About />
       <Courses />
       <Benefits />
       <Events />
@@ -23,7 +23,7 @@ const HomePage = () => {
       <Team />
       <Testimonials />
       <Blog />
-      <Subscribe />
+      <Subscribe /> */}
     </div>
   );
 };
