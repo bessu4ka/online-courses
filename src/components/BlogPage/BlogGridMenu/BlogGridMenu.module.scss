@@ -70,6 +70,7 @@
 				background-color: $gray200;
 				border-radius: 4px;
 				transition: .3s ease;
+				justify-content: center;
 
 				@media (max-width:$large-size) {
 					padding: 0 50px;
@@ -174,6 +175,10 @@
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;
 		margin-bottom: 80px;
+
+		@media (max-width:875px) {
+			margin-bottom: 20px;
+		}
 
 		@media (max-width:$large-size) {
 			display: grid;
@@ -281,6 +286,14 @@
 				max-width: -webkit-fit-content;
 				max-width: -moz-fit-content;
 				max-width: fit-content;
+				transition: .3s ease;
+
+				&:hover {
+					>span {
+						color: $primary;
+						transition: .3s ease;
+					}
+				}
 
 				>span {
 					font-weight: 700;

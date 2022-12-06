@@ -1,20 +1,40 @@
 @import 'scss';
 
 .container {
-	width: 1230px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	padding: 0 20px;
+
+	@media (max-width:$large-size) {
+		justify-content: center;
+		margin: -100px 0px 60px 0px;
+		width: 80%;
+	}
+
+	@media (max-width:865px) {
+		width: 390px;
+		overflow: hidden;
+	}
 
 	>img {
 		width: 507px;
 		height: 454px;
 		display: block;
+
+		@media (max-width:$large-size) {
+			display: none;
+		}
 	}
 
 	.info {
 		display: flex;
 		flex-direction: column;
+
+		@media (max-width:$large-size) {
+			align-items: center;
+		}
 
 		.title {
 			font-weight: 900;
@@ -22,6 +42,15 @@
 			line-height: 130%;
 			color: $gray900;
 			width: 600px;
+
+			@media (max-width:$large-size) {
+				width: 100%;
+				text-align: center;
+			}
+
+			@media (max-width:865px) {
+				width: 390px;
+			}
 		}
 
 		.formWrapper {
@@ -38,6 +67,10 @@
 					border-radius: 4px;
 					padding: 0 16px;
 					border: 1px solid $gray400;
+
+					@media (max-width:865px) {
+						width: 212px;
+					}
 				}
 
 				.btnWrapper {
