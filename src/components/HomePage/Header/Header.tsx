@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import { LargeButton } from 'components/Buttons/LargeButton';
 import { OutlineLargeButton } from 'components/Buttons/OutLineLargeButton';
 import { PlayAnimateButton } from 'components/Buttons/PlayAnimateButton';
@@ -5,13 +7,22 @@ import { headVector } from 'images/homePage';
 
 import styled from './Header.module.scss';
 
+const data = [
+  { amount: 1200, text: 'Students graduated' },
+  { amount: 84, text: 'Completed courses' },
+  { amount: 16, text: 'Qualified tutors' },
+  { amount: 5, text: 'Years of experience' },
+];
+
 const Header = () => {
   return (
     <div className={styled.container}>
       <div className={styled.content}>
         <section className={styled.headWrapper}>
           <div>
-            <PlayAnimateButton />
+            <div className={styled.animateBtnWrapper}>
+              <PlayAnimateButton />
+            </div>
             <h1 className={styled.mainTitle}>
               Enjoy studying with Createx Online Courses
             </h1>
@@ -29,28 +40,17 @@ const Header = () => {
         </section>
 
         <div className={styled.achievements}>
-          <article>
-            <p>1200</p>
-            <span>Students graduated</span>
-          </article>
-          <div />
-
-          <article>
-            <p>84</p>
-            <span>Completed courses</span>
-          </article>
-          <div />
-
-          <article>
-            <p>16</p>
-            <span>Qualified tutors</span>
-          </article>
-          <div />
-
-          <article>
-            <p>5</p>
-            <span>Years of experience</span>
-          </article>
+          {data.map(({ amount, text }, index) => {
+            return (
+              <Fragment key={index}>
+                <article>
+                  <p>{amount}</p>
+                  <span>{text}</span>
+                </article>
+                <div />
+              </Fragment>
+            );
+          })}
         </div>
       </div>
     </div>
