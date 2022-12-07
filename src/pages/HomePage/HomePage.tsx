@@ -15,15 +15,15 @@ const HomePage = () => {
   return (
     <div className={styled.container}>
       <Header />
-      {/* <About />
-      <Courses />
-      <Benefits />
-      <Events />
-      <Certificate />
-      <Team />
-      <Testimonials />
-      <Blog />
-      <Subscribe /> */}
+      <About />
+      {/* <Courses /> */}
+      {/* <Benefits /> */}
+      {/* <Events /> */}
+      {/* <Certificate /> */}
+      {/* <Team /> */}
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
+      {/* <Subscribe /> */}
     </div>
   );
 };

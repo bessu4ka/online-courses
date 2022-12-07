@@ -15,20 +15,22 @@ const data = [
 
 const About = () => {
   return (
-    <div className={styled.container}>
+    <section className={styled.container}>
       <img src={about} alt='about' />
 
       <aside>
         <h3>Who we are</h3>
         <h2>Why Createx?</h2>
 
-        <article className={styled.ListWrapper}>
+        <article className={styled.listWrapper}>
           {data.map((el, index) => {
             return (
-              <div key={index} className={styled.ListElement}>
-                <svg className={styled.icon}>
-                  <use href={sprite + '#about-check'} />
-                </svg>
+              <div key={index} className={styled.listElement}>
+                <div>
+                  <svg className={styled.icon}>
+                    <use href={sprite + '#about-check'} />
+                  </svg>
+                </div>
                 <p>{el}</p>
               </div>
             );
@@ -39,7 +41,7 @@ const About = () => {
           </div>
         </article>
       </aside>
-    </div>
+    </section>
   );
 };
 
