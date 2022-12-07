@@ -7,6 +7,19 @@
 	box-shadow: $small;
 	cursor: pointer;
 	transition: linear 0.2s;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		width: 472px;
+	}
+
+	@media (max-width:$regular-size) {
+		width: 600px;
+	}
+
+	@media (max-width:600px) {
+		width: 390px;
+	}
 
 	&:hover {
 		box-shadow: $regular;
@@ -68,6 +81,10 @@
 		border-radius: 0 4px 4px 0;
 		padding: 32px 0 0 32px;
 
+		@media (max-width:600px) {
+			padding: 32px 0px 0px 10px;
+		}
+
 		>div {
 			font-size: 14px;
 			line-height: 150%;
@@ -87,7 +104,22 @@
 			width: 322px;
 			height: 60px;
 			overflow: hidden;
-			margin: 20px 0 20px 0;
+			margin: 20px 0;
+
+			@media (max-width:$large-size) {
+				font-size: 14px;
+				width: -webkit-fit-content;
+				width: -moz-fit-content;
+				width: fit-content;
+			}
+
+			@media (max-width:$regular-size) {
+				font-size: 20px;
+			}
+
+			@media (max-width:600px) {
+				font-size: 14px;
+			}
 		}
 
 		>p {
@@ -95,6 +127,18 @@
 			font-size: 18px;
 			line-height: 150%;
 			color: $danger;
+
+			@media (max-width:$large-size) {
+				font-size: 14px;
+			}
+
+			@media (max-width:$regular-size) {
+				font-size: 20px;
+			}
+
+			@media (max-width:600px) {
+				font-size: 12px;
+			}
 
 			>span {
 				color: $gray700;
