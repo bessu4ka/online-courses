@@ -57,7 +57,7 @@ const data = [
 
 const Courses = () => {
   return (
-    <div className={styled.container}>
+    <section className={styled.container}>
       <aside>
         <div>
           <h3>Ready to learn?</h3>
@@ -84,7 +84,7 @@ const Courses = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

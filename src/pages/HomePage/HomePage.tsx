@@ -16,7 +16,7 @@ const HomePage = () => {
     <div className={styled.container}>
       <Header />
       <About />
-      {/* <Courses /> */}
+      <Courses />
       {/* <Benefits /> */}
       {/* <Events /> */}
       {/* <Certificate /> */}
