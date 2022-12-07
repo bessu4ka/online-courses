@@ -5,23 +5,57 @@
 	gap: 135px;
 	margin: 180px 0;
 
+	@media (max-width:$large-size) {
+		flex-direction: column;
+		gap: 20px;
+		margin: 20px 0;
+	}
+
+	>img {
+		@media (max-width:$large-size) {
+			width: 980px;
+		}
+
+		@media (max-width:$regular-size) {
+			width: 100%;
+			padding: 0px 5px;
+		}
+	}
+
 	h3 {
 		@include title-h3;
+
+		@media (max-width:$small-size) {
+			margin: 0px 0px 0px 5px;
+		}
 	}
 
 	h2 {
 		@include title-h2;
 		margin: 8px 0 40px 0;
+
+		@media (max-width:$large-size) {
+			margin: 0px 0px 10px 0px;
+		}
+
+		@media (max-width:$small-size) {
+			margin: 0px 0px 0px 5px;
+		}
 	}
 
-	.ListWrapper {
+	.listWrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
 
-		.ListElement {
+		@media (max-width:$small-size) {
+			gap: 5px;
+		}
+
+		.listElement {
 			display: flex;
 			gap: 16px;
+			padding: 0px 5px;
 
 			.icon {
 				width: 16px;
@@ -37,12 +71,25 @@
 				max-height: 52px;
 				overflow: hidden;
 				color: $gray800;
+
+				@media (max-width:$large-size) {
+					max-width: fit-content;
+					font-size: 20px;
+				}
+
+				@media (max-width:$regular-size) {
+					font-size: 16px;
+				}
 			}
 		}
 
 		.btnWrapper {
 			margin-top: 48px;
 			width: 161px;
+
+			@media (max-width:$small-size) {
+				margin: 20px 0px 0px 5px;
+			}
 		}
 	}
 }
