@@ -20,7 +20,9 @@ const Header = () => {
       <div className={styled.content}>
         <section className={styled.headWrapper}>
           <div>
-            <PlayAnimateButton />
+            <div className={styled.animateBtnWrapper}>
+              <PlayAnimateButton />
+            </div>
             <h1 className={styled.mainTitle}>
               Enjoy studying with Createx Online Courses
             </h1>
