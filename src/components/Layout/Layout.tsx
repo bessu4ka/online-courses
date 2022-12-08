@@ -11,7 +11,7 @@ const Layout = () => {
   const modalContext = useContext(ModalContext);
 
   useEffect(() => {
-    const bodyElement: HTMLElement | null = document.getElementById('hidden');
+    const bodyElement: HTMLElement | null = document.querySelector('body');
     if (modalContext.isOpenLogin || modalContext.isOpenMenu) {
       if (bodyElement) {
         bodyElement.style.overflowY = 'hidden';
