@@ -1,33 +1,9 @@
 import { LargeButton } from 'components/Buttons/LargeButton';
 import { Event } from './Event/Event';
+import data from './data.json';
 
 import styled from './Events.module.scss';
 
-const data = [
-  {
-    number: '05',
-    month: 'August',
-    time: '11:00 – 14:00',
-    title:
-      'Formation of the organizational structure of the company in the face of uncertainty.',
-    format: 'Online master-class',
-  },
-  {
-    number: '24',
-    month: 'July',
-    time: '11:00 – 12:30',
-    title: 'Building a customer service department. Best Practices.',
-    format: 'Online lecture',
-  },
-  {
-    number: '16',
-    month: 'July',
-    time: '10:00 – 13:00',
-    title:
-      'How to apply methods of speculative design in practice. World building prototyping.',
-    format: 'Online workshop',
-  },
-];
 const Events = () => {
   return (
     <div className={styled.container}>

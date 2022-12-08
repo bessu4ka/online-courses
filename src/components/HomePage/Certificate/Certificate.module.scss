@@ -5,6 +5,15 @@
 	width: 1230px;
 	justify-content: space-between;
 	margin: 120px 0;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		margin: 10px 0px 40px 0px;
+	}
 
 	aside {
 		width: 397px;
@@ -12,11 +21,29 @@
 
 		h3 {
 			@include title-h3;
+
+			@media (max-width:$large-size) {
+				text-align: center;
+			}
+
+			@media (max-width:$small-size) {
+				padding: 0px 5px;
+			}
 		}
 
 		h2 {
 			@include title-h2;
 			margin: 8px 0 48px 0;
+
+			@media (max-width:$large-size) {
+				margin: 0px 0px 0px 0px;
+				text-align: center;
+			}
+
+			@media (max-width:$small-size) {
+				font-size: 40px;
+				padding: 0px 5px;
+			}
 		}
 
 		p {
@@ -24,11 +51,23 @@
 			line-height: 160%;
 			color: $gray800;
 			margin-bottom: 32px;
+
+			@media (max-width:$large-size) {
+				text-align: center;
+			}
+
+			@media (max-width:$small-size) {
+				padding: 0px 5px;
+			}
 		}
 
 		.logoWrapper {
 			display: flex;
 			justify-content: space-between;
+
+			@media (max-width:$small-size) {
+				padding: 0px 5px;
+			}
 
 			.logo {
 				width: 105px;
@@ -42,5 +81,14 @@
 	>img {
 		display: block;
 		width: 705px;
+
+		@media (max-width:$large-size) {
+			width: 80%;
+		}
+
+		@media (max-width:$small-size) {
+			width: 100%;
+			padding: 0px 10px;
+		}
 	}
 }
