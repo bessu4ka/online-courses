@@ -6,11 +6,14 @@ import styled from './LoginModal.module.scss';
 import { SignIn } from './SignIn';
 import { SignUp } from './SignUp';
 
+const data = ['facebook', 'google', 'linked-In', 'twitter'];
+
 interface IProps {
   closeModal: () => void;
 }
 
 type LoginBody = 'signIn' | 'signUp';
+
 const LoginModal: FC<IProps> = ({ closeModal }) => {
   const [loginBody, setLoginBody] = useState<LoginBody>('signIn');
 
@@ -32,18 +35,13 @@ const LoginModal: FC<IProps> = ({ closeModal }) => {
         <article className={styled.signWithIn}>
           <p>Or sign in with</p>
           <div className={styled.iconsWrapper}>
-            <svg className={styled.icon}>
-              <use href={sprite + '#facebook'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#google'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#linked-In'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#twitter'}></use>
-            </svg>
+            {data.map((el) => {
+              return (
+                <svg key={el} className={styled.icon}>
+                  <use href={sprite + `#${el}`} />
+                </svg>
+              );
+            })}
           </div>
         </article>
       </div>
