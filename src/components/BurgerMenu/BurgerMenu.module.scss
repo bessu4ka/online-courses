@@ -1,0 +1,46 @@
+@import 'scss';
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	width: 0;
+	height: 0;
+	animation: .3s ease open-menu;
+	animation-fill-mode: forwards;
+	background: linear-gradient(149deg, $secondary-light 0%, $secondary 42%, $warning 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.linkWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.link {
+			font-size: 32px;
+			font-weight: 700;
+			color: $gray700;
+			text-transform: capitalize;
+		}
+
+		.activeLink {
+			@extend .link;
+			color: $danger;
+		}
+	}
+}
+
+@keyframes open-menu {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	100% {
+		width: 100vw;
+		height: 100vh;
+	}
+}

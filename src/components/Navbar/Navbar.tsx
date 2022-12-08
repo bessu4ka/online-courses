@@ -6,6 +6,7 @@ import 'tippy.js/dist/tippy.css';
 import { LargeButton } from 'components/Buttons/LargeButton';
 import { ModalPortal } from 'components/ModalPortal';
 import { LoginModal } from 'components/LoginModal';
+import { BurgerMenu } from 'components/BurgerMenu';
 import { routes } from 'utils/routes';
 import sprite from 'images/sprite.svg';
 
@@ -39,9 +40,16 @@ const Navbar = () => {
 
   return (
     <>
+      {/* login portal */}
       <ModalPortal
         children={<LoginModal closeModal={closeModalLogin} />}
         isOpen={isOpenModalRegistration}
+      />
+
+      {/* menu portal */}
+      <ModalPortal
+        children={<BurgerMenu closeModal={closeNavigateMenu} />}
+        isOpen={isOpenModalNavigateMenu}
       />
 
       <div className={styled.mobileMenuButtonWrapper}>
@@ -81,7 +89,7 @@ const Navbar = () => {
           <div className={styled.buttonWrapper}>
             <LargeButton title='Get consultation' />
           </div>
-          <button className={styled.login} onClick={openModalLogin}>
+          <button className={styled.login} onClick={() => openModalLogin()}>
             <svg className={styled.person}>
               <use href={sprite + '#person'} />
             </svg>
