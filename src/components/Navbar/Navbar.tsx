@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext } from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -7,34 +7,33 @@ import { LargeButton } from 'components/Buttons/LargeButton';
 import { ModalPortal } from 'components/ModalPortal';
 import { LoginModal } from 'components/LoginModal';
 import { BurgerMenu } from 'components/BurgerMenu';
+import { ModalContext } from 'context/MobileMenuContext';
 import { routes } from 'utils/routes';
 import sprite from 'images/sprite.svg';
 
 import styled from './Navbar.module.scss';
 
 const Navbar = () => {
-  const [isOpenModalRegistration, setIsOpenModalRegistration] = useState(false);
-  const [isOpenModalNavigateMenu, setIsOpenModalNavigateMenu] = useState(false);
-
+  const modalContext = useContext(ModalContext);
   const navigate = useNavigate();
 
   // login menu
   function openModalLogin() {
-    setIsOpenModalRegistration(true);
+    modalContext?.setIsOpenLogin(true);
   }
 
   function closeModalLogin() {
-    setIsOpenModalRegistration(false);
+    modalContext?.setIsOpenLogin(false);
   }
   // - - - - - - - - - - - - - -
 
   // navigate menu
   function openNavigateMenu() {
-    setIsOpenModalNavigateMenu(true);
+    modalContext.setIsOpenMenu(true);
   }
 
   function closeNavigateMenu() {
-    setIsOpenModalNavigateMenu(false);
+    modalContext.setIsOpenMenu(false);
   }
   // - - - - - - - - - - - - - -
 
@@ -43,23 +42,23 @@ const Navbar = () => {
       {/* login portal */}
       <ModalPortal
         children={<LoginModal closeModal={closeModalLogin} />}
-        isOpen={isOpenModalRegistration}
+        isOpen={modalContext.isOpenLogin}
       />
 
       {/* menu portal */}
       <ModalPortal
         children={<BurgerMenu closeModal={closeNavigateMenu} />}
-        isOpen={isOpenModalNavigateMenu}
+        isOpen={modalContext.isOpenMenu}
       />
 
       <div className={styled.mobileMenuButtonWrapper}>
-        {isOpenModalNavigateMenu && (
+        {modalContext.isOpenMenu && (
           <svg className={styled.burger} onClick={closeNavigateMenu}>
             <use href={sprite + '#cross-burger'} />
           </svg>
         )}
 
-        {!isOpenModalNavigateMenu && (
+        {!modalContext.isOpenMenu && (
           <svg className={styled.burger} onClick={openNavigateMenu}>
             <use href={sprite + '#burger'} />
           </svg>

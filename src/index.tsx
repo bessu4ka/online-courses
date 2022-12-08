@@ -1,3 +1,4 @@
+import { ModalProvider } from 'context/MobileMenuContext';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -8,6 +9,8 @@ import './index.scss';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <BrowserRouter>
-    <App />
+    <ModalProvider>
+      <App />
+    </ModalProvider>
   </BrowserRouter>,
 );

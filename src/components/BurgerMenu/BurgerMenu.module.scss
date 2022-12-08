@@ -7,7 +7,9 @@
 	z-index: 200;
 	width: 0;
 	height: 0;
+	-webkit-animation: .3s ease open-menu;
 	animation: .3s ease open-menu;
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 	background: linear-gradient(149deg, $secondary-light 0%, $secondary 42%, $warning 100%);
 	display: flex;
@@ -30,6 +32,18 @@
 			@extend .link;
 			color: $danger;
 		}
+	}
+}
+
+@-webkit-keyframes open-menu {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	100% {
+		width: 100vw;
+		height: 100vh;
 	}
 }
 
