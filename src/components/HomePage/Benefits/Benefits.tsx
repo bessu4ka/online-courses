@@ -12,6 +12,12 @@ const data = [
   { icon: '#chat', title: 'Community' },
 ];
 
+const text = `Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum
+							suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc,
+							sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum.
+							Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus
+							vehicula.`;
+
 const Benefits = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -24,7 +30,7 @@ const Benefits = () => {
       <h3>Our benefits</h3>
       <h2>That’s how we do it</h2>
 
-      <article>
+      <nav>
         {data.map(({ icon, title }, index) => {
           return (
             <div
@@ -34,24 +40,18 @@ const Benefits = () => {
               <svg className={activeTab === index ? styled.activeIcon : styled.icon}>
                 <use href={sprite + icon} />
               </svg>
-              <p className={activeTab === index ? styled.activeTitle : styled.title}>
+              <span className={activeTab === index ? styled.activeTitle : styled.title}>
                 {title}
-              </p>
+              </span>
             </div>
           );
         })}
-      </article>
+      </nav>
 
       <aside>
         <div>
           <h4>Only practicing tutors</h4>
-          <p>
-            Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum
-            suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc,
-            sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum.
-            Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus
-            vehicula.
-          </p>
+          <p>{text}</p>
         </div>
 
         <img src={benefits} alt='benefits' />
