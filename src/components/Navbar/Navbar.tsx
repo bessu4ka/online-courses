@@ -7,7 +7,7 @@ import { LargeButton } from 'components/Buttons/LargeButton';
 import { ModalPortal } from 'components/ModalPortal';
 import { LoginModal } from 'components/LoginModal';
 import { BurgerMenu } from 'components/BurgerMenu';
-import { ModalContext } from 'context/MobileMenuContext';
+import { ModalContext } from 'context/ModalContext';
 import { routes } from 'utils/routes';
 import sprite from 'images/sprite.svg';
 
