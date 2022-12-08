@@ -12,7 +12,7 @@ export const validationSchemaSignUn = Yup.object().shape({
   fullName: Yup.string()
     .min(6, 'Enter min 6 letters')
     .max(30, 'Max 30 letters')
-    .required('Enter password'),
+    .required('Enter your full name'),
   email: Yup.string()
     .email('Incorrect data')
     .max(100, 'Enter correct data')

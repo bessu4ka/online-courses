@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from 'formik';
 import { FC } from 'react';
 
-import { validationSchemaSignIn } from 'utils/validationSchema';
+import { validationSchemaSignUn } from 'utils/validationSchema';
 import { RegularButton } from 'components/Buttons/RegularButton';
 import { Checkbox } from 'components/Checkbox';
 import { TextError } from '../TextError';
@@ -41,7 +41,7 @@ const SignUp: FC<IProps> = ({ goToSignIn }) => {
 
       <Formik
         initialValues={initialValues}
-        validationSchema={validationSchemaSignIn}
+        validationSchema={validationSchemaSignUn}
         onSubmit={(values) => {
           onSubmit(values);
         }}>
