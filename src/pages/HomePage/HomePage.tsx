@@ -18,8 +18,8 @@ const HomePage = () => {
       <About />
       <Courses />
       <Benefits />
-      {/* <Events /> */}
-      {/* <Certificate /> */}
+      <Events />
+      <Certificate />
       {/* <Team /> */}
       {/* <Testimonials /> */}
       {/* <Blog /> */}
