@@ -7,15 +7,12 @@
 	overflow: hidden;
 
 	@media (max-width:$large-size) {
+		width: 100vw;
 		margin-bottom: 80px;
 	}
 
 	@media (max-width:$small-size) {
 		margin-bottom: 40px;
-	}
-
-	@media (max-width:$large-size) {
-		width: 100vw;
 	}
 
 	.headWrapper {
