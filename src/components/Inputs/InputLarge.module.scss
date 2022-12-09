@@ -10,6 +10,34 @@
 	line-height: 160%;
 	color: $gray800;
 
+	@media (max-width:$small-size) {
+		width: 60%;
+	}
+
+	&::-webkit-input-placeholder {
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray600;
+	}
+
+	&::-moz-placeholder {
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray600;
+	}
+
+	&:-ms-input-placeholder {
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray600;
+	}
+
+	&::-ms-input-placeholder {
+		font-size: 16px;
+		line-height: 160%;
+		color: $gray600;
+	}
+
 	&::placeholder {
 		font-size: 16px;
 		line-height: 160%;

@@ -8,10 +8,17 @@
 	align-items: center;
 	height: 564px;
 
+	overflow: hidden;
 	background-image: url(../../../images/homePage/subscribe.png),
 		url(../../../images/homePage/subscribe.png);
 	background-repeat: no-repeat;
 	background-position: bottom left, bottom right;
+
+
+	@media (max-width:$small-size) {
+		background-image: url(../../../images/homePage/subscribe.png);
+		background-position: bottom center;
+	}
 
 	h3 {
 		@include title-h3;
@@ -24,6 +31,11 @@
 		height: 120px;
 		text-align: center;
 		margin: 8px 0 60px 0;
+
+		@media (max-width:$regular-size) {
+			max-width: 90%;
+			font-size: 32px;
+		}
 	}
 
 	.form {
