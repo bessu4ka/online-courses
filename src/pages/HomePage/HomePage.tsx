@@ -21,8 +21,8 @@ const HomePage = () => {
       <Events />
       <Certificate />
       <Team />
-      {/* <Testimonials /> */}
-      {/* <Blog /> */}
+      <Testimonials />
+      <Blog />
       {/* <Subscribe /> */}
     </div>
   );
