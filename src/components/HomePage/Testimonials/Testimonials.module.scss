@@ -2,6 +2,16 @@
 
 .container {
 	margin-bottom: 95px;
+	max-width: 100vw;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		margin: 0px 0px 60px 0px;
+	}
+
+	@media (max-width:$small-size) {
+		margin: 0px 0px 40px 0px;
+	}
 
 	h3 {
 		@include title-h3;
@@ -12,6 +22,10 @@
 		@include title-h2;
 		text-align: center;
 		margin: 8px 0 60px 0;
+
+		@media (max-width:$large-size) {
+			margin: 0px 0px 0px 0px;
+		}
 	}
 
 }

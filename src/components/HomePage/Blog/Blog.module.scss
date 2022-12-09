@@ -3,6 +3,20 @@
 .container {
 	width: 1230px;
 	margin-bottom: 180px;
+	max-width: 100%;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		margin-bottom: 80px;
+	}
+
+	@media (max-width:$small-size) {
+		margin-bottom: 40px;
+	}
+
+	@media (max-width:$large-size) {
+		width: 100vw;
+	}
 
 	.headWrapper {
 		display: flex;
@@ -10,10 +24,21 @@
 		align-items: flex-end;
 		margin-bottom: 60px;
 
+		@media (max-width:1229px) {
+			justify-content: center;
+			gap: 100px;
+		}
+
+		@media (max-width:809px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+
 		.titleWrapper {
 			h3 {
 				@include title-h3;
-				margin-bottom: 8px
+				margin-bottom: 8px;
 			}
 
 			h2 {
@@ -29,5 +54,11 @@
 	.postsWrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width:$large-size) {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+		}
 	}
 }
