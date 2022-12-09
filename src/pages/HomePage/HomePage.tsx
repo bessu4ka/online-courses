@@ -23,7 +23,7 @@ const HomePage = () => {
       <Team />
       <Testimonials />
       <Blog />
-      {/* <Subscribe /> */}
+      <Subscribe />
     </div>
   );
 };
