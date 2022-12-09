@@ -5,6 +5,7 @@ import { Navigation } from 'swiper';
 import 'swiper/css';
 
 // ------------------------
+import { useSlideCount } from 'hooks/useSlideCount';
 import { courses_1, courses_2, courses_3, courses_4 } from 'images/homePage';
 import { Slide } from './Slide';
 import sprite from 'images/sprite.svg';
@@ -29,9 +30,10 @@ const data = [
 const TeamSwiper = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
+  const numberOfSlides = useSlideCount();
 
   return (
-    <>
+    <section className={styled.content}>
       {/* swiper navigation */}
       <div className={styled.navigation}>
         <div ref={navigationPrevRef}>
@@ -49,7 +51,7 @@ const TeamSwiper = () => {
       {/* swiper */}
       <div className={styled.container}>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={numberOfSlides}
           spaceBetween={30}
           loop={true}
           navigation={{
@@ -75,7 +77,7 @@ const TeamSwiper = () => {
           })}
         </Swiper>
       </div>
-    </>
+    </section>
   );
 };
 
