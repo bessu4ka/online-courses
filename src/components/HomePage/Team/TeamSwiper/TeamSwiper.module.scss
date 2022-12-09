@@ -1,36 +1,60 @@
 @import 'scss';
 
-.navigation {
+.content {
 	display: flex;
-	gap: 6px;
-	margin-left: auto;
-	margin-bottom: 48px;
+	flex-direction: column;
 
-	>div {
-		width: 48px;
-		height: 48px;
-		border-radius: 50%;
+	@media (max-width:600px) {
+		flex-direction: row;
+		margin: 60px 0px 0px 0px;
+		gap: 5px;
+		overflow: hidden;
+	}
+
+	.navigation {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		gap: 6px;
+		margin-left: auto;
+		margin-bottom: 48px;
 
-		&:hover {
-			background-color: $primary;
+		>div {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&:hover {
+				background-color: $primary;
+
+				>svg {
+					fill: $white;
+				}
+			}
 
 			>svg {
-				fill: $white;
+				width: 24px;
+				height: 24px;
+				fill: $gray800;
+				display: block;
 			}
 		}
+	}
 
-		>svg {
-			width: 24px;
-			height: 24px;
-			fill: $gray800;
-			display: block;
+	.container {
+		width: 1230px;
+
+		@media (max-width:$large-size) {
+			width: 915px;
+		}
+
+		@media (max-width:920px) {
+			width: 600px;
+		}
+
+		@media (max-width:600px) {
+			width: 285px;
 		}
 	}
-}
-
-.container {
-	width: 1230px;
 }
