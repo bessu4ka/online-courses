@@ -19,9 +19,9 @@ const AboutUs = () => {
       <Directions />
       <StudyingProcess />
       <Team />
-      <Testimonials />
-      <Blog />
-      <Subscribe />
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
+      {/* <Subscribe /> */}
     </div>
   );
 };

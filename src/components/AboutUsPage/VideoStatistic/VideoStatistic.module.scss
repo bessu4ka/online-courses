@@ -2,21 +2,30 @@
 
 .container {
 	width: 100%;
-	padding: 180px 0;
+	margin: 180px 0;
 	display: flex;
 	justify-content: center;
 	color: $gray900;
-
-	// bg-images -----------
 	background-image: url(../../../assets/backgroundSVGs/orange-dots-statistic.svg),
 		url(../../../assets/backgroundSVGs/orange-half-circles.svg);
 	background-repeat: no-repeat;
 	background-position: bottom 137px left 255px,
 		right 140px bottom 45px;
-	// ----------------------
+
+	@media (max-width:$large-size) {
+		margin: 60px 0px;
+	}
+
+	@media (max-width:$small-size) {
+		margin: 40px 0px;
+	}
 
 	.content {
 		width: 1230px;
+
+		@media (max-width:$large-size) {
+			width: 95%;
+		}
 
 		.btnWrapper {
 			display: flex;
@@ -57,16 +66,34 @@
 			align-items: center;
 			justify-content: space-between;
 
+			@media (max-width:$large-size) {
+				flex-direction: column-reverse;
+			}
+
 			.image {
 				width: 810px;
 				height: 500px;
 				box-shadow: $small;
+
+				@media (max-width:860px) {
+					width: 100%;
+					height: auto;
+				}
 			}
 
 			>ul {
 				display: flex;
 				flex-direction: column;
 				gap: 20px;
+
+				@media (max-width:$small-size) {
+					flex-wrap: wrap;
+				}
+
+
+				@media (max-width:$large-size) {
+					flex-direction: row;
+				}
 
 				>li {
 					display: flex;
@@ -78,12 +105,21 @@
 						font-size: 48px;
 						line-height: 130%;
 						color: $primary;
+
+						@media (max-width:$small-size) {
+							font-size: 30px
+						}
 					}
 
 					.description {
 						font-weight: 700;
 						font-size: 18px;
 						line-height: 150%;
+
+						@media (max-width:$small-size) {
+							font-size: 14px;
+						}
+
 					}
 				}
 			}

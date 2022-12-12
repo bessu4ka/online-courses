@@ -9,6 +9,15 @@
 	align-items: center;
 	justify-content: space-between;
 
+	@media (max-width:$large-size) {
+		width: 90%;
+		margin-top: 60px;
+	}
+
+	@media (max-width:$small-size) {
+		margin-top: 40px;
+	}
+
 	h3 {
 		@include title-h3;
 	}
@@ -65,6 +74,14 @@
 					margin-left: 3px;
 				}
 			}
+		}
+	}
+
+	.image {
+		display: block;
+
+		@media (max-width:$large-size) {
+			display: none;
 		}
 	}
 }
