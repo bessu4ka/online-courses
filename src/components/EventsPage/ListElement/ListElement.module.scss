@@ -11,6 +11,10 @@
 	padding: 0 40px;
 	border-radius: 4px;
 
+	@media (max-width:478px) {
+		padding: 0px 0px 0px 0px;
+	}
+
 	&:hover {
 		box-shadow: $small;
 	}
@@ -21,11 +25,26 @@
 		gap: 20px;
 		width: 177px;
 
+		@media (max-width:638px) {
+			display: none;
+		}
+
+		@media (max-width:$regular-size) {
+			column-gap: 5px;
+			width: 120px;
+			overflow: hidden;
+		}
+
 		.day {
 			font-weight: 900;
 			font-size: 48px;
 			line-height: 130%;
 			color: $primary;
+
+			@media (max-width:$regular-size) {
+				font-size: 32px;
+			}
+
 		}
 
 		.info {
@@ -44,6 +63,10 @@
 				font-size: 16px;
 				line-height: 160%;
 				color: $gray700;
+
+				@media (max-width:$regular-size) {
+					font-size: 12px;
+				}
 			}
 		}
 	}
@@ -54,7 +77,6 @@
 		gap: 4px;
 
 		.title {
-			max-width: 757px;
 			font-weight: 700;
 			font-size: 20px;
 			line-height: 150%;
@@ -62,6 +84,14 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+
+			@media (max-width:$large-size) {
+				max-width: 40vw;
+			}
+
+			@media (max-width:$small-size) {
+				max-width: 200px;
+			}
 		}
 
 		.format {
@@ -71,8 +101,11 @@
 		}
 	}
 
-	.btnWrapper {
-		width: 136px;
+	.blockWrap {
 		margin-left: auto;
+
+		.btnWrapper {
+			width: 136px;
+		}
 	}
 }
