@@ -54,7 +54,7 @@ const StudyingProcess = () => {
         </ul>
       </div>
 
-      <img src={studying} alt='girl with a diploma' />
+      <img className={styled.image} src={studying} alt='girl with a diploma' />
     </section>
   );
 };
