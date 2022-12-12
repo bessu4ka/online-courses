@@ -20,8 +20,7 @@ const VideoStatistic = () => {
               <use href={sprite + '#play'} />
             </svg>
           </button>
-
-					<span>Watch Video</span>
+          <span>Watch Video</span>
         </div>
 
         <div className={styled.info}>

@@ -15,13 +15,13 @@ const AboutUs = () => {
     <div className={styled.container}>
       <Info />
       <VideoStatistic />
-      <Values />
-      <Directions />
-      <StudyingProcess />
-      <Team />
-      <Testimonials />
-      <Blog />
-      <Subscribe />
+      {/* <Values /> */}
+      {/* <Directions /> */}
+      {/* <StudyingProcess /> */}
+      {/* <Team /> */}
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
+      {/* <Subscribe /> */}
     </div>
   );
 };
