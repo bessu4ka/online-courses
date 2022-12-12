@@ -6,6 +6,11 @@
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 120px;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		width: 95%;
+	}
 
 	h3 {
 		@include title-h3;
@@ -24,9 +29,21 @@
 		display: flex;
 		justify-content: space-between;
 
+		@media (max-width:$large-size) {
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			row-gap: 10px;
+		}
+
 		.tabsWrapper {
 			display: flex;
 			gap: 10px;
+
+			@media (max-width:$large-size) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
 
 			.tab {
 				box-sizing: border-box;
@@ -133,6 +150,12 @@
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;
 		margin: 60px 0 80px 0;
+
+		@media (max-width:$large-size) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 }
 
