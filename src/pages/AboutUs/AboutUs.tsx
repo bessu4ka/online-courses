@@ -15,7 +15,7 @@ const AboutUs = () => {
     <div className={styled.container}>
       <Info />
       <VideoStatistic />
-      {/* <Values /> */}
+      <Values />
       {/* <Directions /> */}
       {/* <StudyingProcess /> */}
       {/* <Team /> */}

@@ -6,6 +6,10 @@
 	flex-direction: column;
 	align-items: center;
 
+	@media (max-width:$large-size) {
+		width: 95%;
+	}
+
 	h3 {
 		@include title-h3;
 	}
@@ -13,12 +17,28 @@
 	h2 {
 		@include title-h2;
 		margin: 8px 0 60px 0;
+
+		@media (max-width:$large-size) {
+			margin: 0px 0px 20px 0px;
+		}
+
+		@media (max-width:$small-size) {
+			text-align: center;
+		}
 	}
 
 	>ul {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width:$large-size) {
+			-moz-column-gap: 5%;
+			column-gap: 5%;
+			justify-content: center;
+			flex-wrap: wrap;
+			row-gap: 10px;
+		}
 
 		>li {
 			border-radius: 4px;
@@ -28,7 +48,7 @@
 			align-items: center;
 			width: 240px;
 			height: 162px;
-			
+
 			>svg {
 				width: 48px;
 				height: 48px;
