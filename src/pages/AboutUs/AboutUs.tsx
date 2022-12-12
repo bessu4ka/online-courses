@@ -16,7 +16,7 @@ const AboutUs = () => {
       <Info />
       <VideoStatistic />
       <Values />
-      {/* <Directions /> */}
+      <Directions />
       {/* <StudyingProcess /> */}
       {/* <Team /> */}
       {/* <Testimonials /> */}

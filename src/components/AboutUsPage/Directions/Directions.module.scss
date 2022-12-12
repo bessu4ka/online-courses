@@ -4,6 +4,11 @@
 	width: 1230px;
 	margin: 180px 0 0 0;
 
+	@media (max-width:$large-size) {
+		width: 95%;
+		margin: 60px 0px;
+	}
+
 	h3 {
 		@include title-h3;
 		text-align: center
@@ -13,6 +18,10 @@
 		@include title-h2;
 		text-align: center;
 		margin: 8px 0 60px 0;
+
+		@media (max-width:$regular-size) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	>ul {
@@ -21,6 +30,13 @@
 		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;
+
+		@media (max-width:$large-size) {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+			justify-content: center;
+		}
 
 		>li {
 			width: 390px;
