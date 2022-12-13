@@ -35,6 +35,10 @@
 	width: 1230px;
 	margin-bottom: 185px;
 
+	@media (max-width:$large-size) {
+		display: none;
+	}
+
 	h3 {
 		@include title-h3;
 	}

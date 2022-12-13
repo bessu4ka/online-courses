@@ -1,0 +1,28 @@
+{
+  "list": [
+    "A fermentum in morbi pretium aliquam adipiscing donec tempus.",
+    "Vulputate placerat amet pulvinar lorem nisl.",
+    "Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.",
+    "Etiam duis lobortis in fames ultrices commodo nibh.",
+    "Fringilla in nec risus congue venenatis pretium posuere nec.",
+    "Cursus eu pretium, vulputate tempus quam massa sed at."
+  ],
+  "text": "Bibendum vulputate adipiscing venenatis at est, a eu tincidunt. Leo aenean congue in sagittis, felis maecenas amet varius at. Pellentesque euismod in faucibus at elementum. Tellus maecenas libero est tempus sit cras at malesuada diam. Consequat senectus dictumst non hac dignissim montes, pretium, egestas molestie. Sed magna aliquet ornare nibh vel lectus diam eget pretium. Lorem risus nunc tincidunt tortor, mi nulla pellentesque",
+  "course": [
+    {
+      "title": "DATES",
+      "bold": "Sept 7 - Nov 2",
+      "text": "Metus turpis sit lorem lacus, in elit tellus lacus."
+    },
+    {
+      "title": "DURATION",
+      "bold": "2 months - 8 lessons",
+      "text": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+    },
+    {
+      "title": "PRICE",
+      "bold": "$120 per month",
+      "text": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+    }
+  ]
+}

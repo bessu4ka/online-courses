@@ -13,10 +13,19 @@
 	flex-direction: column;
 	justify-content: space-between;
 
+	@media (max-width:$large-size) {
+		width: 95%;
+		height: fit-content;
+	}
+
 	.info {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (max-width:607px) {
+			flex-direction: column;
+		}
 
 		h3 {
 			font-weight: 900;
@@ -51,6 +60,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+
+		@media (max-width:$large-size) {
+			flex-wrap: wrap;
+			row-gap: 10px;
+		}
 
 		.inputWrapper {
 			display: flex;

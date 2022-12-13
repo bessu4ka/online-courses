@@ -1,4 +1,6 @@
 import { RegularButton } from 'components/Buttons/RegularButton';
+import data from './data.json';
+
 import styled from './CTA.module.scss';
 
 const CTA = () => {
@@ -6,57 +8,31 @@ const CTA = () => {
     <section className={styled.container}>
       <div className={styled.info}>
         <h3>20% discount for early birds!</h3>
-        <div className={styled.time}>
-          {/* days */}
-          <div className={styled.date}>
-            <p>06</p>
-            <span>Days</span>
-          </div>
-
-          {/* hours */}
-          <div className={styled.date}>
-            <p>18</p>
-            <span>Hours</span>
-          </div>
-
-          {/* minutes */}
-          <div className={styled.date}>
-            <p>24</p>
-            <span>Mins</span>
-          </div>
-
-          {/* seconds */}
-          <div className={styled.date}>
-            <p>12</p>
-            <span>Sec</span>
-          </div>
-        </div>
+        <ul className={styled.time}>
+          {data.date.map(({ number, text }, index) => {
+            return (
+              <li key={index} className={styled.date}>
+                <p>{number}</p>
+                <span>{text}</span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
 
-      <div className={styled.form}>
-        {/* full name */}
-        <div className={styled.inputWrapper}>
-          <label htmlFor='fullName'>Full name</label>
-          <input id='fullName' placeholder='Your full name' type='text' />
-        </div>
-
-        {/* email */}
-        <div className={styled.inputWrapper}>
-          <label htmlFor='email'>Email</label>
-          <input id='email' placeholder='Your working email' type='email' />
-        </div>
-
-        {/* phone */}
-        <div className={styled.inputWrapper}>
-          <label htmlFor='phone'>Phone</label>
-          <input id='phone' placeholder='Your phone number' type='number' />
-        </div>
-
-        {/* btn */}
+      <ul className={styled.form}>
+        {data.input.map(({ label, id, placeholder, type }) => {
+          return (
+            <li key={id} className={styled.inputWrapper}>
+              <label htmlFor={id}>{label}</label>
+              <input id={id} placeholder={placeholder} type={type} />
+            </li>
+          );
+        })}
         <div className={styled.btnWrapper}>
           <RegularButton title='Join the course' />
         </div>
-      </div>
+      </ul>
     </section>
   );
 };

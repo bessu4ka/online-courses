@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Full name",
+    "id": "fullName",
+    "placeholder": "Your full name",
+    "type": "text"
+  },
+  {
+    "label": "Email",
+    "id": "email",
+    "placeholder": "Your working email",
+    "type": "email"
+  },
+  {
+    "label": "Phone",
+    "id": "phone",
+    "placeholder": "Your phone number",
+    "type": "number"
+  }
+]
