@@ -6,6 +6,17 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 200px;
+	overflow: hidden;
+
+	@media (max-width:$large-size) {
+		width: 95%;
+		justify-content: center;
+		margin-bottom: 80px;
+	}
+
+	@media (max-width:$small-size) {
+		margin-bottom: 40px;
+	}
 
 	.listWrapper {
 		h3 {
@@ -15,10 +26,19 @@
 		h2 {
 			@include title-h2;
 			margin: 8px 0 60px 0;
+
+			@media (max-width:$regular-size) {
+				margin: 0px 0px 20px 0px;
+			}
 		}
 
 		>ul {
 			max-width: 600px;
+
+			@media (max-width:$small-size) {
+				width: 100%;
+				overflow: hidden;
+			}
 
 			>li {
 
@@ -51,6 +71,23 @@
 						white-space: nowrap;
 						overflow: hidden;
 						text-overflow: ellipsis;
+
+						@media (max-width:625px) {
+							font-size: 16px;
+						}
+
+						@media (max-width:525px) {
+							width: 300px;
+						}
+
+						@media (max-width:450px) {
+							font-size: 14px;
+							width: 250px;
+						}
+
+						@media (max-width:400px) {
+							width: 200px;
+						}
 					}
 				}
 
@@ -64,6 +101,10 @@
 					text-overflow: ellipsis;
 					-webkit-animation: 1s show ease;
 					animation: 1s show ease;
+
+					@media (max-width:625px) {
+						font-size: 12px;
+					}
 				}
 
 				.noText {
@@ -76,7 +117,11 @@
 	>img {
 		width: 495px;
 		height: 554px;
-		display: flex;
+		display: block;
+
+		@media (max-width:$large-size) {
+			display: none;
+		}
 	}
 }
 

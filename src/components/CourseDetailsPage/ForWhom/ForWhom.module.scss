@@ -6,6 +6,17 @@
 	justify-content: space-between;
 	margin: 180px 0;
 
+	@media (max-width:$large-size) {
+		align-items: center;
+		flex-direction: column;
+		width: 95%;
+		margin: 80px 0px;
+	}
+
+	@media (max-width:$small-size) {
+		margin: 40px 0px;
+	}
+
 	>div {
 		max-width: 495px;
 

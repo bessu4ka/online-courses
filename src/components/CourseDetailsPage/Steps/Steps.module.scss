@@ -4,6 +4,15 @@
 	width: 1230px;
 	margin-bottom: 180px;
 
+	@media (max-width:$large-size) {
+		width: 95%;
+		margin-bottom: 80px;
+	}
+
+	@media (max-width:$small-size) {
+		margin-bottom: 49px;
+	}
+
 	h3 {
 		@include title-h3;
 		text-align: center;
@@ -15,11 +24,10 @@
 	}
 
 	.steps {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 1fr;
-		grid-column-gap: 30px;
-		grid-row-gap: 0px;
+		display: flex;
+		gap: 30px;
+		justify-content: center;
+		flex-wrap: wrap;
 		margin-top: 60px;
 
 		.step {

@@ -6,10 +6,24 @@
 	justify-content: space-between;
 	margin: 80px 0 180px 0;
 
+	@media (max-width:$large-size) {
+		width: 95%;
+		margin: 60px 0px 80px 0px;
+		justify-content: center;
+	}
+
+	@media (max-width:$small-size) {
+		margin: 40px 0px;
+	}
+
 	>img {
 		width: 550px;
 		height: 502px;
 		display: block;
+
+		@media (max-width:$large-size) {
+			display: none;
+		}
 	}
 
 	.registerWrapper {
@@ -47,6 +61,10 @@
 					color: $gray800;
 					border: 1px solid $gray400;
 					border-radius: 4px;
+
+					@media (max-width:$small-size) {
+						width: 100%;
+					}
 
 					&::-webkit-inner-spin-button {
 						-webkit-appearance: none;

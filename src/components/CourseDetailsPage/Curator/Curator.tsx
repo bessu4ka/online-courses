@@ -1,5 +1,6 @@
 import { curator } from 'images/coursePage';
 import sprite from 'images/sprite.svg';
+import data from './data.json';
 
 import styled from './Curator.module.scss';
 
@@ -15,54 +16,31 @@ const Curator = () => {
       <aside className={styled.descriptionWrapper}>
         <h3>Course curator</h3>
         <h2>Cody Fisher</h2>
-        <span className={styled.position}>Senior UX designer in IT Product Company</span>
+        <span className={styled.position}>{data.position}</span>
 
-        <div className={styled.ratingWrapper}>
-          <div className={styled.rating}>
-            <svg>
-              <use href={sprite + '#star'} />
-            </svg>
-            <span>4.9 rate</span>
-          </div>
-          <div className={styled.rating}>
-            <svg>
-              <use href={sprite + '#play-curator'} />
-            </svg>
-            <span>4 courses</span>
-          </div>
-          <div className={styled.rating}>
-            <svg>
-              <use href={sprite + '#person'} />
-            </svg>
-            <span>350 students</span>
-          </div>
-        </div>
+        <ul className={styled.ratingWrapper}>
+          {data.indicators.map(({ icon, text }, index) => {
+            return (
+              <li key={index} className={styled.rating}>
+                <svg>
+                  <use href={sprite + `#${icon}`} />
+                </svg>
+                <span>{text}</span>
+              </li>
+            );
+          })}
+        </ul>
 
-        <p className={styled.description}>
-          Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur
-          venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis
-          commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur
-          vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo
-          platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam
-          tristique sollicitudin interdum quam.
-        </p>
+        <p className={styled.description}>{data.description}</p>
 
         <div className={styled.socialsWrapper}>
-          <svg>
-            <use href={sprite + '#facebook'} />
-          </svg>
-
-          <svg>
-            <use href={sprite + '#behance'} />
-          </svg>
-
-          <svg>
-            <use href={sprite + '#twitter'} />
-          </svg>
-
-          <svg>
-            <use href={sprite + '#linked-In'} />
-          </svg>
+          {data.socials.map((icon, index) => {
+            return (
+              <svg key={index}>
+                <use href={sprite + `#${icon}`} />
+              </svg>
+            );
+          })}
         </div>
       </aside>
     </section>
