@@ -11,6 +11,13 @@
 		z-index: 20;
 		background-color: $white;
 
+		@media (max-width:$small-size) {
+			width: 390px;
+			padding: 5px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+
 		.signWithIn {
 			display: flex;
 			flex-direction: column;
