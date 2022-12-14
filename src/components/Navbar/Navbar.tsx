@@ -17,6 +17,17 @@ const Navbar = () => {
   const modalContext = useContext(ModalContext);
   const navigate = useNavigate();
 
+  // scrollToTop
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  // scroll & navigate for logo
+  function scrollNavigateLogo() {
+    navigate('/');
+    scrollToTop();
+  }
+
   // login menu
   function openModalLogin() {
     modalContext?.setIsOpenLogin(true);
@@ -67,7 +78,7 @@ const Navbar = () => {
 
       <nav className={styled.container}>
         <Tippy content='Home page'>
-          <svg className={styled.logo} onClick={() => navigate('/')}>
+          <svg className={styled.logo} onClick={scrollNavigateLogo}>
             <use href={sprite + '#logo'} />
           </svg>
         </Tippy>
@@ -75,6 +86,7 @@ const Navbar = () => {
           {routes.map((route, index) => {
             return (
               <NavLink
+                onClick={() => scrollToTop()}
                 className={({ isActive }) => (isActive ? styled.activeLink : styled.link)}
                 key={index}
                 to={route.link}>
