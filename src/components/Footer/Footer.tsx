@@ -76,7 +76,9 @@ const Footer = () => {
             <svg className={styled.contactIcon}>
               <use href={sprite + '#mail'} />
             </svg>
-            <p className={styled.item}>hello@createx.com</p>
+            <a href='mailto:hello@createx.com' className={styled.item}>
+              hello@createx.com
+            </a>
           </div>
         </article>
 
