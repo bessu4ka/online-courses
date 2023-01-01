@@ -1,6 +1,14 @@
+import sprite from 'images/sprite.svg';
+import { footerLinks } from 'utils/routes';
+
 import styled from './Footer.module.scss';
 
-import sprite from 'images/sprite.svg';
+const text = `
+		Createx Online School is a leader in online studying. We have lots of courses
+		and programs from the main market experts. We provide relevant approaches to
+		online learning, internships and employment in the largest companies in the
+		country.
+`;
 
 const Footer = () => {
   return (
@@ -10,50 +18,46 @@ const Footer = () => {
           <svg className={styled.logo}>
             <use href={sprite + '#logo-invert'}></use>
           </svg>
-          <p className={styled.text}>
-            Createx Online School is a leader in online studying. We have lots of courses
-            and programs from the main market experts. We provide relevant approaches to
-            online learning, internships and employment in the largest companies in the
-            country.
-          </p>
-          <div className={styled.icons}>
-            <svg className={styled.icon}>
-              <use href={sprite + '#facebook'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#twitter'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#youtube'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#telegram'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#instagram'}></use>
-            </svg>
-            <svg className={styled.icon}>
-              <use href={sprite + '#linked-In'}></use>
-            </svg>
-          </div>
+          <p className={styled.text}>{text}</p>
+
+          <ul className={styled.icons}>
+            {footerLinks.socials.map((el, index) => {
+              return (
+                <li key={index}>
+                  <svg className={styled.icon}>
+                    <use href={sprite + `#${el}`}></use>
+                  </svg>
+                </li>
+              );
+            })}
+          </ul>
         </article>
 
         <article className={`${styled.list} ${styled.hidden}`}>
           <h4>SITE MAP</h4>
-          <p className={styled.item}>About Us</p>
-          <p className={styled.item}>Courses</p>
-          <p className={styled.item}>Events</p>
-          <p className={styled.item}>Blog</p>
-          <p className={styled.item}>Contacts</p>
+
+          <ul>
+            {footerLinks.siteMap.map((el, index) => {
+              return (
+                <li key={index} className={styled.item}>
+                  {el}
+                </li>
+              );
+            })}
+          </ul>
         </article>
 
         <article className={`${styled.list} ${styled.hidden}`}>
           <h4>COURSES</h4>
-          <p className={styled.item}>Marketing</p>
-          <p className={styled.item}>Management</p>
-          <p className={styled.item}>HR & Recruting</p>
-          <p className={styled.item}>Design</p>
-          <p className={styled.item}>Development</p>
+          <ul>
+            {footerLinks.courses.map((el, index) => {
+              return (
+                <li key={index} className={styled.item}>
+                  {el}
+                </li>
+              );
+            })}
+          </ul>
         </article>
 
         <article className={styled.list}>
@@ -61,7 +65,7 @@ const Footer = () => {
 
           <div className={styled.contactWrapper}>
             <svg className={styled.contactIcon}>
-              <use href={sprite + '#iPhone'}></use>
+              <use href={sprite + '#iPhone'} />
             </svg>
             <a href='tel:4055550128' className={styled.item}>
               (405) 555-0128
@@ -70,7 +74,7 @@ const Footer = () => {
 
           <div className={styled.contactWrapper}>
             <svg className={styled.contactIcon}>
-              <use href={sprite + '#mail'}></use>
+              <use href={sprite + '#mail'} />
             </svg>
             <p className={styled.item}>hello@createx.com</p>
           </div>
@@ -81,7 +85,7 @@ const Footer = () => {
           <div className={styled.inputWrapper}>
             <input type='text' placeholder='Email address' />
             <svg className={styled.arrow}>
-              <use href={sprite + '#right'}></use>
+              <use href={sprite + '#right'} />
             </svg>
           </div>
           <p className={styled.description}>
