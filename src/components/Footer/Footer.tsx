@@ -63,7 +63,9 @@ const Footer = () => {
             <svg className={styled.contactIcon}>
               <use href={sprite + '#iPhone'}></use>
             </svg>
-            <p className={styled.item}>(405) 555-0128</p>
+            <a href='tel:4055550128' className={styled.item}>
+              (405) 555-0128
+            </a>
           </div>
 
           <div className={styled.contactWrapper}>
