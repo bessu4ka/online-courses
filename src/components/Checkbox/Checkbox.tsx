@@ -1,25 +1,24 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import sprite from 'images/sprite.svg';
 
 import styled from './Checkbox.module.scss';
 
-const Checkbox = () => {
-  const [isChecked, setIsChecked] = useState(false);
+interface IProps {
+  checked?: boolean;
+}
 
+const Checkbox: FC<IProps> = ({ checked }) => {
   return (
     <>
-      {isChecked ? (
-        <div className={styled.checked} onClick={() => setIsChecked((prev) => !prev)}>
+      {checked ? (
+        <div className={styled.checked}>
           <svg>
-            <use href={sprite + '#check'}></use>
+            <use href={sprite + '#check'} />
           </svg>
         </div>
       ) : (
-        <div
-          className={styled.notChecked}
-          onClick={() => setIsChecked((prev) => !prev)}
-        />
+        <div className={styled.notChecked} />
       )}
     </>
   );

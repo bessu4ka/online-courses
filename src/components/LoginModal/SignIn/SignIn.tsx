@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from 'formik';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { validationSchemaSignIn } from 'utils/validationSchema';
 import { RegularButton } from 'components/Buttons/RegularButton';
@@ -7,6 +7,7 @@ import { Checkbox } from 'components/Checkbox';
 import { TextError } from '../TextError';
 
 import styled from '../Sign.module.scss';
+import { func } from 'prop-types';
 
 interface IProps {
   goToSignUp: () => void;
@@ -27,6 +28,8 @@ function onSubmit(values: IInitialValues): void {
 }
 
 const SignIn: FC<IProps> = ({ goToSignUp }) => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <div className={styled.container}>
       <h3 className={styled.title}>Sign in</h3>
@@ -78,8 +81,8 @@ const SignIn: FC<IProps> = ({ goToSignUp }) => {
       </Formik>
 
       <div className={styled.infoWrapper}>
-        <div className={styled.inputWrapper}>
-          <Checkbox />
+        <div onClick={() => setChecked((prev) => !prev)} className={styled.inputWrapper}>
+          <Checkbox checked={checked} />
           <p>Keep me signed in</p>
         </div>
         <p className={styled.forgot}>Forgot password?</p>

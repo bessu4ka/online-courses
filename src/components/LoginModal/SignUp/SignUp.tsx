@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from 'formik';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { validationSchemaSignUn } from 'utils/validationSchema';
 import { RegularButton } from 'components/Buttons/RegularButton';
@@ -31,6 +31,8 @@ function onSubmit(values: IInitialValues): void {
 }
 
 const SignUp: FC<IProps> = ({ goToSignIn }) => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <div className={styled.container}>
       <h3 className={styled.title}>Sign up</h3>
@@ -121,8 +123,8 @@ const SignUp: FC<IProps> = ({ goToSignIn }) => {
       </Formik>
 
       <div className={styled.infoWrapperSignUp}>
-        <div className={styled.inputWrapper}>
-          <Checkbox />
+        <div onClick={() => setChecked((prev) => !prev)} className={styled.inputWrapper}>
+          <Checkbox checked={checked} />
           <p>Remember me</p>
         </div>
       </div>
