@@ -28,7 +28,7 @@ const VideoStatistic = () => {
           <ul>
             {data.map(({ amount, description }, index) => {
               return (
-                <li key={index} className={styled.descriptionFields}>
+                <li key={index}>
                   <span className={styled.amount}>{amount}</span>
                   <span className={styled.description}>{description}</span>
                 </li>

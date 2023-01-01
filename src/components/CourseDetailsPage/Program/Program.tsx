@@ -13,7 +13,7 @@ const Program = () => {
     setIsOpenedLessonText(order);
   }
 
-  function closeInformation(order: number) {
+  function closeInformation() {
     setIsOpenedLessonText(null);
   }
 
@@ -29,7 +29,7 @@ const Program = () => {
               <li key={index}>
                 <div className={styled.titleWrapper}>
                   {isOpenedLessonText === order ? (
-                    <svg onClick={() => closeInformation(order)}>
+                    <svg onClick={() => closeInformation()}>
                       <use href={sprite + '#minus'} />
                     </svg>
                   ) : (

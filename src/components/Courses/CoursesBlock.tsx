@@ -92,7 +92,7 @@ const cardData = [
 
 const CoursesBlock = () => {
   const [currentTab, setCurrentTab] = useState(0);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   function setFocus() {
     inputRef.current && inputRef.current.focus();
