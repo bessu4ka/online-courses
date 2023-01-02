@@ -75,6 +75,10 @@
 
 				.btnWrapper {
 					width: 154px;
+
+					@media (max-width:$tiny-size) {
+						width: 120px;
+					}
 				}
 			}
 		}
@@ -83,6 +87,10 @@
 			display: flex;
 			align-items: center;
 			gap: 12px;
+
+			@media (max-width:$tiny-size) {
+				width: 370px;
+			}
 
 			>span {
 				font-size: 16px;

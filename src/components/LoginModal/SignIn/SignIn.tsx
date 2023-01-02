@@ -7,7 +7,6 @@ import { Checkbox } from 'components/Checkbox';
 import { TextError } from '../TextError';
 
 import styled from '../Sign.module.scss';
-import { func } from 'prop-types';
 
 interface IProps {
   goToSignUp: () => void;

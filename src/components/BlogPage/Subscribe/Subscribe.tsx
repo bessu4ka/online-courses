@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { LargeButton } from 'components/Buttons/LargeButton';
 import { Checkbox } from 'components/Checkbox';
 import { subscribe } from 'images/BlogPage';
@@ -10,6 +12,8 @@ const agreement = `I agree to receive communications
 			from Createx Online School`;
 
 const Subscribe = () => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <section className={styled.container}>
       <img src={subscribe} alt='bookshelf' />
@@ -26,8 +30,10 @@ const Subscribe = () => {
           </div>
         </div>
 
-        <div className={styled.checkboxWrapper}>
-          <Checkbox />
+        <div
+          onClick={() => setChecked((prev) => !prev)}
+          className={styled.checkboxWrapper}>
+          <Checkbox checked={checked} />
           <span>{agreement}</span>
         </div>
       </div>

@@ -45,7 +45,7 @@
 				margin-bottom: 20px;
 
 				@media (max-width:$small-size) {
-					width: 380px;
+					width: 370px;
 				}
 
 				&::-webkit-input-placeholder {
@@ -99,6 +99,10 @@
 		color: $gray800;
 		margin: 24px 200px 48px 0;
 
+		@media (max-width:$small-size) {
+			margin: 24px 170px 48px 0;
+		}
+
 		.signBtn {
 			cursor: pointer;
 			color: $primary;
@@ -114,7 +118,7 @@
 		margin: 0 0 24px 0;
 
 		@media (max-width:$small-size) {
-			width: 380px;
+			width: 370px;
 		}
 
 		.forgot {
@@ -142,7 +146,7 @@
 		margin: 0 0 24px 0;
 
 		@media (max-width:$small-size) {
-			width: 380px;
+			width: 370px;
 		}
 	}
 
@@ -152,7 +156,7 @@
 		width: 390px;
 
 		@media (max-width:$small-size) {
-			width: 380px;
+			width: 370px;
 		}
 	}
 }
