@@ -76,6 +76,10 @@
 		flex-direction: column;
 		gap: 4px;
 
+		@media (max-width:$tiny-size) {
+			padding-left: 5px;
+		}
+
 		.title {
 			font-weight: 700;
 			font-size: 20px;
@@ -106,6 +110,11 @@
 
 		.btnWrapper {
 			width: 136px;
+
+			@media (max-width:$tiny-size) {
+				width: 80px;
+				margin-right: 5px;
+			}
 		}
 	}
 }
