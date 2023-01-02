@@ -135,6 +135,10 @@
 				font-size: 16px;
 				line-height: 160%;
 				color: $gray800;
+
+				@media (max-width:$tiny-size) {
+					font-size: 13px;
+				}
 			}
 
 			>select {
@@ -163,7 +167,7 @@
 			}
 
 			@media (max-width:865px) {
-				width: 390px;
+				width: 370px;
 			}
 		}
 	}
@@ -246,6 +250,10 @@
 				gap: 12px;
 				margin: 16px 0 8px 0;
 
+				@media (max-width:$tiny-size) {
+					margin-left: 5px;
+				}
+
 				>span {
 					font-weight: 700;
 					font-size: 14px;
@@ -266,6 +274,10 @@
 				line-height: 150%;
 				color: $gray900;
 				display: block;
+
+				@media (max-width:$tiny-size) {
+					margin-left: 5px;
+				}
 			}
 
 			.text {
@@ -275,6 +287,10 @@
 				display: block;
 				max-height: 52px;
 				overflow: hidden;
+
+				@media (max-width:$tiny-size) {
+					margin-left: 5px;
+				}
 			}
 
 			.method {
@@ -287,6 +303,10 @@
 				max-width: -moz-fit-content;
 				max-width: fit-content;
 				transition: .3s ease;
+
+				@media (max-width:$tiny-size) {
+					margin-left: 5px;
+				}
 
 				&:hover {
 					>span {
