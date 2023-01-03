@@ -1,19 +1,19 @@
 {
-  "position": "Senior UX designer in IT Product Company",
-  "indicators": [
-    {
-      "icon": "star",
-      "text": "4.9 rate"
-    },
-    {
-      "icon": "play-curator",
-      "text": "4 courses"
-    },
-    {
-      "icon": "person",
-      "text": "350 students"
-    }
-  ],
-  "description": "Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.",
-  "socials": ["facebook", "behance", "twitter", "linked-In"]
+	"position": "Senior UX designer in IT Product Company",
+	"indicators": [
+		{
+			"icon": "star",
+			"text": "4.9 rate"
+		},
+		{
+			"icon": "play-curator",
+			"text": "4 courses"
+		},
+		{
+			"icon": "person",
+			"text": "350 students"
+		}
+	],
+	"description": "Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.",
+	"socials": ["facebook", "behance", "twitter", "linked-In"]
 }

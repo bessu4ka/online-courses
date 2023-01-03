@@ -10,94 +10,94 @@ const text = `
 		country.
 `;
 
-const Footer = () => {
-  return (
-    <footer className={styled.container}>
-      <div className={styled.contentWrapper}>
-        <article className={styled.logoInfoWrapper}>
-          <svg className={styled.logo}>
-            <use href={sprite + '#logo-invert'}></use>
-          </svg>
-          <p className={styled.text}>{text}</p>
+const Footer = (): JSX.Element => {
+	return (
+		<footer className={styled.container}>
+			<div className={styled.contentWrapper}>
+				<article className={styled.logoInfoWrapper}>
+					<svg className={styled.logo}>
+						<use href={sprite + '#logo-invert'}></use>
+					</svg>
+					<p className={styled.text}>{text}</p>
 
-          <ul className={styled.icons}>
-            {footerLinks.socials.map((el, index) => {
-              return (
-                <li key={index}>
-                  <svg className={styled.icon}>
-                    <use href={sprite + `#${el}`}></use>
-                  </svg>
-                </li>
-              );
-            })}
-          </ul>
-        </article>
+					<ul className={styled.icons}>
+						{footerLinks.socials.map((el, index) => {
+							return (
+								<li key={index}>
+									<svg className={styled.icon}>
+										<use href={sprite + `#${el}`}></use>
+									</svg>
+								</li>
+							);
+						})}
+					</ul>
+				</article>
 
-        <article className={`${styled.list} ${styled.hidden}`}>
-          <h4>SITE MAP</h4>
+				<article className={`${styled.list} ${styled.hidden}`}>
+					<h4>SITE MAP</h4>
 
-          <ul>
-            {footerLinks.siteMap.map((el, index) => {
-              return (
-                <li key={index} className={styled.item}>
-                  {el}
-                </li>
-              );
-            })}
-          </ul>
-        </article>
+					<ul>
+						{footerLinks.siteMap.map((el, index) => {
+							return (
+								<li key={index} className={styled.item}>
+									{el}
+								</li>
+							);
+						})}
+					</ul>
+				</article>
 
-        <article className={`${styled.list} ${styled.hidden}`}>
-          <h4>COURSES</h4>
-          <ul>
-            {footerLinks.courses.map((el, index) => {
-              return (
-                <li key={index} className={styled.item}>
-                  {el}
-                </li>
-              );
-            })}
-          </ul>
-        </article>
+				<article className={`${styled.list} ${styled.hidden}`}>
+					<h4>COURSES</h4>
+					<ul>
+						{footerLinks.courses.map((el, index) => {
+							return (
+								<li key={index} className={styled.item}>
+									{el}
+								</li>
+							);
+						})}
+					</ul>
+				</article>
 
-        <article className={styled.list}>
-          <h4>CONTACT US</h4>
+				<article className={styled.list}>
+					<h4>CONTACT US</h4>
 
-          <div className={styled.contactWrapper}>
-            <svg className={styled.contactIcon}>
-              <use href={sprite + '#iPhone'} />
-            </svg>
-            <a href='tel:4055550128' className={styled.item}>
-              (405) 555-0128
-            </a>
-          </div>
+					<div className={styled.contactWrapper}>
+						<svg className={styled.contactIcon}>
+							<use href={sprite + '#iPhone'} />
+						</svg>
+						<a href="tel:4055550128" className={styled.item}>
+							(405) 555-0128
+						</a>
+					</div>
 
-          <div className={styled.contactWrapper}>
-            <svg className={styled.contactIcon}>
-              <use href={sprite + '#mail'} />
-            </svg>
-            <a href='mailto:hello@createx.com' className={styled.item}>
-              hello@createx.com
-            </a>
-          </div>
-        </article>
+					<div className={styled.contactWrapper}>
+						<svg className={styled.contactIcon}>
+							<use href={sprite + '#mail'} />
+						</svg>
+						<a href="mailto:hello@createx.com" className={styled.item}>
+							hello@createx.com
+						</a>
+					</div>
+				</article>
 
-        <article className={styled.list}>
-          <h4>SIGN UP TO OUR NEWSLETTER</h4>
-          <div className={styled.inputWrapper}>
-            <input type='text' placeholder='Email address' />
-            <svg className={styled.arrow}>
-              <use href={sprite + '#right'} />
-            </svg>
-          </div>
-          <p className={styled.description}>
-            *Subscribe to our newsletter to receive communications and early updates from
-            Createx SEO Agency.
-          </p>
-        </article>
-      </div>
-    </footer>
-  );
+				<article className={styled.list}>
+					<h4>SIGN UP TO OUR NEWSLETTER</h4>
+					<div className={styled.inputWrapper}>
+						<input type="text" placeholder="Email address" />
+						<svg className={styled.arrow}>
+							<use href={sprite + '#right'} />
+						</svg>
+					</div>
+					<p className={styled.description}>
+						*Subscribe to our newsletter to receive communications and early updates from Createx
+						SEO Agency.
+					</p>
+				</article>
+			</div>
+		</footer>
+	);
 };
 
 export { Footer };

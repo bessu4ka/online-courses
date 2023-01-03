@@ -7,31 +7,31 @@ import { ModalContext } from 'context/ModalContext';
 
 import styled from './Layout.module.scss';
 
-const Layout = () => {
-  const modalContext = useContext(ModalContext);
+const Layout = (): JSX.Element => {
+	const modalContext = useContext(ModalContext);
 
-  useEffect(() => {
-    const bodyElement: HTMLElement | null = document.querySelector('body');
-    if (modalContext.isOpenLogin || modalContext.isOpenMenu) {
-      if (bodyElement) {
-        bodyElement.style.overflowY = 'hidden';
-      }
-    } else {
-      if (bodyElement) {
-        bodyElement.style.overflowY = 'auto';
-      }
-    }
-  }, [modalContext.isOpenLogin, modalContext.isOpenMenu]);
+	useEffect(() => {
+		const bodyElement: HTMLElement | null = document.querySelector('body');
+		if (modalContext.isOpenLogin || modalContext.isOpenMenu) {
+			if (bodyElement) {
+				bodyElement.style.overflowY = 'hidden';
+			}
+		} else {
+			if (bodyElement) {
+				bodyElement.style.overflowY = 'auto';
+			}
+		}
+	}, [modalContext.isOpenLogin, modalContext.isOpenMenu]);
 
-  return (
-    <div className={styled.container}>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
-  );
+	return (
+		<div className={styled.container}>
+			<Header />
+			<main>
+				<Outlet />
+			</main>
+			<Footer />
+		</div>
+	);
 };
 
 export { Layout };

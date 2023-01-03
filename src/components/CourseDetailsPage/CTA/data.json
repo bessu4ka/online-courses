@@ -1,40 +1,40 @@
 {
-  "date": [
-    {
-      "number": "06",
-      "text": "Days"
-    },
-    {
-      "number": "18",
-      "text": "Hours"
-    },
-    {
-      "number": "24",
-      "text": "Mins"
-    },
-    {
-      "number": "12",
-      "text": "Sec"
-    }
-  ],
-  "input": [
-    {
-      "label": "Full name",
-      "id": "fullName",
-      "placeholder": "Your full name",
-      "type": "text"
-    },
-    {
-      "label": "Email",
-      "id": "email",
-      "placeholder": "Your working email",
-      "type": "email"
-    },
-    {
-      "label": "Phone",
-      "id": "phone",
-      "placeholder": "Your phone number",
-      "type": "number"
-    }
-  ]
+	"date": [
+		{
+			"number": "06",
+			"text": "Days"
+		},
+		{
+			"number": "18",
+			"text": "Hours"
+		},
+		{
+			"number": "24",
+			"text": "Mins"
+		},
+		{
+			"number": "12",
+			"text": "Sec"
+		}
+	],
+	"input": [
+		{
+			"label": "Full name",
+			"id": "fullName",
+			"placeholder": "Your full name",
+			"type": "text"
+		},
+		{
+			"label": "Email",
+			"id": "email",
+			"placeholder": "Your working email",
+			"type": "email"
+		},
+		{
+			"label": "Phone",
+			"id": "phone",
+			"placeholder": "Your phone number",
+			"type": "number"
+		}
+	]
 }

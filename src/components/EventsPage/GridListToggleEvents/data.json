@@ -1,65 +1,65 @@
 [
-  {
-    "day": "05",
-    "month": "August",
-    "time": "11:00 – 14:00",
-    "title": "Formation of the organizational structure of the company in the face of uncertainty.",
-    "format": "Online master-class"
-  },
-  {
-    "day": "24",
-    "month": "July",
-    "time": "11:00 – 12:30",
-    "title": "Building a customer service department. Best Practices.",
-    "format": "Online lecture"
-  },
-  {
-    "day": "16",
-    "month": "July",
-    "time": "10:00 – 13:00",
-    "title": "How to apply methods of speculative design in practice. World building prototyping.",
-    "format": "Online workshop"
-  },
-  {
-    "day": "10",
-    "month": "July",
-    "time": "9:00 – 14:00",
-    "title": "Find and evaluate: search and assessment tools for candidates.",
-    "format": "Online workshop"
-  },
-  {
-    "day": "27",
-    "month": "June",
-    "time": "15:00 – 19:00",
-    "title": "Connection to Microsoft Excel and Google Sheets, Data Visualization in Power BI.",
-    "format": "Online master-class"
-  },
-  {
-    "day": "15",
-    "month": "June",
-    "time": "10:00 – 12:00",
-    "title": "Marketing or growth hacking: main differences and what business needs.",
-    "format": "Online lecture"
-  },
-  {
-    "day": "02",
-    "month": "June",
-    "time": "11:00 – 13:00",
-    "title": "How to brief a client and present your design to approve it from the first show.",
-    "format": "Online lecture"
-  },
-  {
-    "day": "29",
-    "month": "May",
-    "time": "11:00 – 12:00",
-    "title": "Who is a project manager and do I want to be PM?",
-    "format": "Online lecture"
-  },
-  {
-    "day": "18",
-    "month": "May",
-    "time": "10:00 – 12:00",
-    "title": "The company's business page as an additional tool to support the announcement of vacancies.",
-    "format": "Online lecture"
-  }
+	{
+		"day": "05",
+		"month": "August",
+		"time": "11:00 – 14:00",
+		"title": "Formation of the organizational structure of the company in the face of uncertainty.",
+		"format": "Online master-class"
+	},
+	{
+		"day": "24",
+		"month": "July",
+		"time": "11:00 – 12:30",
+		"title": "Building a customer service department. Best Practices.",
+		"format": "Online lecture"
+	},
+	{
+		"day": "16",
+		"month": "July",
+		"time": "10:00 – 13:00",
+		"title": "How to apply methods of speculative design in practice. World building prototyping.",
+		"format": "Online workshop"
+	},
+	{
+		"day": "10",
+		"month": "July",
+		"time": "9:00 – 14:00",
+		"title": "Find and evaluate: search and assessment tools for candidates.",
+		"format": "Online workshop"
+	},
+	{
+		"day": "27",
+		"month": "June",
+		"time": "15:00 – 19:00",
+		"title": "Connection to Microsoft Excel and Google Sheets, Data Visualization in Power BI.",
+		"format": "Online master-class"
+	},
+	{
+		"day": "15",
+		"month": "June",
+		"time": "10:00 – 12:00",
+		"title": "Marketing or growth hacking: main differences and what business needs.",
+		"format": "Online lecture"
+	},
+	{
+		"day": "02",
+		"month": "June",
+		"time": "11:00 – 13:00",
+		"title": "How to brief a client and present your design to approve it from the first show.",
+		"format": "Online lecture"
+	},
+	{
+		"day": "29",
+		"month": "May",
+		"time": "11:00 – 12:00",
+		"title": "Who is a project manager and do I want to be PM?",
+		"format": "Online lecture"
+	},
+	{
+		"day": "18",
+		"month": "May",
+		"time": "10:00 – 12:00",
+		"title": "The company's business page as an additional tool to support the announcement of vacancies.",
+		"format": "Online lecture"
+	}
 ]

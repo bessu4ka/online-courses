@@ -4,29 +4,29 @@ import { createPortal } from 'react-dom';
 const modalRootElement = document.querySelector('#modal');
 
 interface IProps {
-  children: React.ReactNode;
-  isOpen: boolean;
-  setIsOpen?: (prev: boolean) => void;
+	children: React.ReactNode;
+	isOpen: boolean;
+	setIsOpen?: (prev: boolean) => void;
 }
 
 const ModalPortal: FC<IProps> = ({ children, isOpen, setIsOpen }) => {
-  const element = useMemo(() => document.createElement('div'), []);
+	const element = useMemo(() => document.createElement('div'), []);
 
-  useEffect(() => {
-    if (isOpen) {
-      modalRootElement?.appendChild(element);
+	useEffect(() => {
+		if (isOpen) {
+			modalRootElement?.appendChild(element);
 
-      return () => {
-        modalRootElement?.removeChild(element);
-      };
-    }
-  }, [element, isOpen]);
+			return () => {
+				modalRootElement?.removeChild(element);
+			};
+		}
+	}, [element, isOpen]);
 
-  if (isOpen) {
-    return createPortal(children, element);
-  }
+	if (isOpen) {
+		return createPortal(children, element);
+	}
 
-  return null;
+	return null;
 };
 
 export { ModalPortal };

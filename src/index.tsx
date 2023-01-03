@@ -8,9 +8,9 @@ import './index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <BrowserRouter>
-    <ModalProvider>
-      <App />
-    </ModalProvider>
-  </BrowserRouter>,
+	<BrowserRouter>
+		<ModalProvider>
+			<App />
+		</ModalProvider>
+	</BrowserRouter>,
 );

@@ -11,21 +11,21 @@ import { Testimonials } from 'components/HomePage/Testimonials';
 
 import styled from './HomePage.module.scss';
 
-const HomePage = () => {
-  return (
-    <div className={styled.container}>
-      <Header />
-      <About />
-      <Courses />
-      <Benefits />
-      <Events />
-      <Certificate />
-      <Team />
-      <Testimonials />
-      <Blog />
-      <Subscribe />
-    </div>
-  );
+const HomePage = (): JSX.Element => {
+	return (
+		<div className={styled.container}>
+			<Header />
+			<About />
+			<Courses />
+			<Benefits />
+			<Events />
+			<Certificate />
+			<Team />
+			<Testimonials />
+			<Blog />
+			<Subscribe />
+		</div>
+	);
 };
 
 export { HomePage };

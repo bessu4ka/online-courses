@@ -11,21 +11,21 @@ import { Testimonials } from 'components/HomePage/Testimonials';
 
 import styled from './CourseDetails.module.scss';
 
-const CourseDetails = () => {
-  return (
-    <div className={styled.container}>
-      <PageTitle />
-      <About />
-      <Curator />
-      <Steps />
-      <CTA />
-      <ForWhom />
-      <Program />
-      <Testimonials />
-      <Register />
-      <RelatedCoursesSwiper />
-    </div>
-  );
+const CourseDetails = (): JSX.Element => {
+	return (
+		<div className={styled.container}>
+			<PageTitle />
+			<About />
+			<Curator />
+			<Steps />
+			<CTA />
+			<ForWhom />
+			<Program />
+			<Testimonials />
+			<Register />
+			<RelatedCoursesSwiper />
+		</div>
+	);
 };
 
 export { CourseDetails };

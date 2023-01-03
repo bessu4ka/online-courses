@@ -10,20 +10,20 @@ import { Testimonials } from 'components/HomePage/Testimonials';
 
 import styled from './AboutUs.module.scss';
 
-const AboutUs = () => {
-  return (
-    <div className={styled.container}>
-      <Info />
-      <VideoStatistic />
-      <Values />
-      <Directions />
-      <StudyingProcess />
-      <Team />
-      <Testimonials />
-      <Blog />
-      <Subscribe />
-    </div>
-  );
+const AboutUs = (): JSX.Element => {
+	return (
+		<div className={styled.container}>
+			<Info />
+			<VideoStatistic />
+			<Values />
+			<Directions />
+			<StudyingProcess />
+			<Team />
+			<Testimonials />
+			<Blog />
+			<Subscribe />
+		</div>
+	);
 };
 
 export { AboutUs };

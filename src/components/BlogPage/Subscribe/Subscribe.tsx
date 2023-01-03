@@ -11,34 +11,32 @@ const title = `Want to get the best articles weekly?
 const agreement = `I agree to receive communications 
 			from Createx Online School`;
 
-const Subscribe = () => {
-  const [checked, setChecked] = useState(false);
+const Subscribe = (): JSX.Element => {
+	const [checked, setChecked] = useState(false);
 
-  return (
-    <section className={styled.container}>
-      <img src={subscribe} alt='bookshelf' />
+	return (
+		<section className={styled.container}>
+			<img src={subscribe} alt="bookshelf" />
 
-      <div className={styled.info}>
-        <h4 className={styled.title}>{title}</h4>
+			<div className={styled.info}>
+				<h4 className={styled.title}>{title}</h4>
 
-        <div className={styled.formWrapper}>
-          <div className={styled.inputWrapper}>
-            <input type='text' placeholder='Your working email' />
-            <div className={styled.btnWrapper}>
-              <LargeButton title='Subscribe' />
-            </div>
-          </div>
-        </div>
+				<div className={styled.formWrapper}>
+					<div className={styled.inputWrapper}>
+						<input type="text" placeholder="Your working email" />
+						<div className={styled.btnWrapper}>
+							<LargeButton title="Subscribe" />
+						</div>
+					</div>
+				</div>
 
-        <div
-          onClick={() => setChecked((prev) => !prev)}
-          className={styled.checkboxWrapper}>
-          <Checkbox checked={checked} />
-          <span>{agreement}</span>
-        </div>
-      </div>
-    </section>
-  );
+				<div onClick={(): void => setChecked((prev) => !prev)} className={styled.checkboxWrapper}>
+					<Checkbox checked={checked} />
+					<span>{agreement}</span>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export { Subscribe };

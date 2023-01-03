@@ -5,15 +5,15 @@ import { Testimonials } from 'components/HomePage/Testimonials';
 
 import styled from './Courses.module.scss';
 
-const Courses = () => {
-  return (
-    <div className={styled.container}>
-      <CoursesBlock />
-      <Testimonials />
-      <Certificate />
-      <Subscribe />
-    </div>
-  );
+const Courses = (): JSX.Element => {
+	return (
+		<div className={styled.container}>
+			<CoursesBlock />
+			<Testimonials />
+			<Certificate />
+			<Subscribe />
+		</div>
+	);
 };
 
 export { Courses };

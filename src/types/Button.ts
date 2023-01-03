@@ -1,4 +1,4 @@
 export interface IButton {
-  title: string;
-  onClick?: () => void;
+	title: string;
+	onClick?: () => void;
 }

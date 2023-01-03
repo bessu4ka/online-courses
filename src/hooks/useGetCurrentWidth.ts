@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 
 export const useGetCurrentWidth = (): number => {
-  const [width, setQuery] = useState(window.screen.width);
+	const [width, setQuery] = useState(window.screen.width);
 
-  useEffect(() => {
-    window.addEventListener('resize', handleScroll);
-    return () => window.removeEventListener('resize', handleScroll);
-  }, []);
+	useEffect(() => {
+		window.addEventListener('resize', handleScroll);
+		return () => window.removeEventListener('resize', handleScroll);
+	}, []);
 
-  function handleScroll() {
-    setQuery(window.screen.width);
-  }
+	function handleScroll(): void {
+		setQuery(window.screen.width);
+	}
 
-  return width;
+	return width;
 };
